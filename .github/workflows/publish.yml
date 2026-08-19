@@ -1,5 +1,5 @@
 name: Publish Quarto website
-
+run: quarto render --to html
 on:
   push:
     branches:
