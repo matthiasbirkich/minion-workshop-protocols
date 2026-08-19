@@ -277,11 +277,11 @@ ________________________________________________________________________________
 - [ ] Select the ONE DNA protocol on the Quantus® Fluorometer.
 - [ ] Enter the volume of the unknown sample (1µl) and desired concentration units.
 - [ ] Measure fluorescence of the unknown sample and record the final sample concentration results.
-- [ ] Calculate the volume for 100fmol. You may use your smartphone with the QR-code below to convert the weight [ng] into molar quantity [fmol]. The COI amplicon with 9bp indexed primer has a size of 726bp, (0.73kb) or after ligation of the two adaptors 800bp (0.8kb).
+- [ ] Calculate the volume required for 100 fmol. You may use the Promega BioMath Calculator to convert DNA mass to molar quantity. Select **dsDNA: µg to pmol** and enter the DNA fragment length and DNA amount. The COI amplicon with the 9 bp indexed primer has a size of 726 bp (0.73 kb), or approximately 800 bp (0.8 kb) after ligation of the two adaptors.
 
-[Open the Bioline weight-to-molar-quantity calculator](https://www.bioline.com/media/calculator/01_07.html)
+[Open the Promega BioMath Calculator](https://www.promega.com/resources/tools/biomath/)
 
-![Scan with your smartphone to visit the molecular weight to molar quantity calculator.](figures/bioline_calculator_qr.png){#fig-bioline-calculator width=25%}
+![Scan with your smartphone to open the Promega BioMath Calculator.](figures/promega_biomath_qr.png){#fig-promega-biomath width=25%}
 
 ::: {.content-visible when-format="html"}
 
