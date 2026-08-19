@@ -17,3 +17,5 @@ format:
   html:
     toc: true
     theme: cosmo
+    link-external-newwindow: true
+    link-external-icon: true
