@@ -1,5 +1,5 @@
 name: Publish Quarto website
-run: quarto render --to html
+
 on:
   push:
     branches:
@@ -30,7 +30,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Render Quarto website
-        run: quarto render
+        run: quarto render --to html
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
