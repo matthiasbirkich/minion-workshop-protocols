@@ -60,10 +60,14 @@ format:
           });
         });
         </script>
+    
+format-links:
 
-  pdf:
-    toc: false
-    number-sections: false
+  - text: "PDF handout"
+
+    href: "Protocol.pdf"
+
+    icon: file-pdf 
 ---
 
 # 3 PCR Product check with agarose gel electrophoresis
