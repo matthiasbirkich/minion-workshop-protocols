@@ -1,0 +1,92 @@
+---
+title: "Using GitHub Discussions"
+subtitle: "Short guide for workshop participants"
+---
+
+# Using GitHub Discussions
+
+GitHub Discussions provides a place for scientific exchange, questions, troubleshooting, suggestions, and follow-up discussions related to the workshop.
+
+Discussions are intended for communication between workshop participants and researchers. They are not tests or assignments.
+
+## When should I use a Discussion?
+
+Use GitHub Discussions when you would like to:
+
+- ask a methodological question;
+- discuss a laboratory protocol;
+- report observations made during the workshop;
+- discuss MinION sequencing or data analysis;
+- share experience with software or equipment;
+- suggest improvements to a protocol or workflow; or
+- continue a scientific discussion after the workshop.
+
+For concrete errors or changes to files in the repository, a GitHub Issue may be more appropriate.
+
+## Opening the Discussions page
+
+Open the GitHub repository in your browser and select:
+
+**Discussions → New discussion**
+
+Alternatively, use:
+
+https://github.com/<OWNER>/<REPOSITORY>/discussions
+
+Replace `<OWNER>` and `<REPOSITORY>` with the corresponding GitHub organization or user name and repository name.
+
+## Select a category
+
+Choose the category that best matches the topic.
+
+Suggested categories for this workshop are:
+
+- **General** – general workshop topics;
+- **Wet Lab** – extraction, PCR, electrophoresis, clean-up, and library preparation;
+- **MinION / Flongle** – sequencing setup and operation;
+- **Data Analysis** – FASTQ files, ONTbarcoder, and related analyses;
+- **Equipment and Methods** – instruments, fluorometry, and laboratory equipment;
+- **Ideas and Improvements** – suggestions for future versions of the workshop.
+
+The available categories may change as the workshop develops.
+
+## Writing a useful discussion
+
+Please use a short and descriptive title.
+
+For example:
+
+> CleanPCR bead drying time after ethanol wash
+
+In the discussion, briefly describe:
+
+- what you were trying to do;
+- which protocol or workshop step you were following;
+- what you observed; and
+- what you would like to discuss.
+
+Images, screenshots, links, or small example files may be useful when they help explain the question.
+
+## Discussions versus Issues
+
+A simple rule of thumb is:
+
+**Discussion:**  
+"I would like to discuss or understand something."
+
+**Issue:**  
+"Something in the repository should be corrected or changed."
+
+A useful scientific discussion may later result in an Issue or an update to the workshop protocol.
+
+## Public discussions
+
+If this workshop repository is public, its GitHub Discussions are public as well.
+
+Do not post confidential information, personal participant data, unpublished sensitive data, passwords, access tokens, or other information that should not be publicly accessible.
+
+## Further information
+
+Official GitHub documentation:
+
+https://docs.github.com/en/discussions/quickstart

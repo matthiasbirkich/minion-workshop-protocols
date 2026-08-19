@@ -1,0 +1,310 @@
+---
+title: "Hands-on MinION Workshop Protocol"
+subtitle: "Sections 3-5"
+lang: en
+
+format:
+  html:
+    toc: true
+    number-sections: false
+
+    include-in-header:
+      text: |
+        <style>
+        .protocol-notes {
+          width: 100%;
+          min-height: 9rem;
+          box-sizing: border-box;
+          padding: 0.75rem;
+          margin-top: 0.4rem;
+          margin-bottom: 1.5rem;
+          font: inherit;
+        }
+
+        .task-list input[type="checkbox"] {
+          transform: scale(1.15);
+          margin-right: 0.45rem;
+        }
+        </style>
+
+    include-after-body:
+      text: |
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const pageKey = window.location.pathname;
+
+          document.querySelectorAll('.task-list input[type="checkbox"]').forEach((box, index) => {
+            const key = `workshop:${pageKey}:task:${index}`;
+            const saved = localStorage.getItem(key);
+
+            if (saved !== null) {
+              box.checked = saved === '1';
+            }
+
+            box.addEventListener('change', () => {
+              localStorage.setItem(key, box.checked ? '1' : '0');
+            });
+          });
+
+          document.querySelectorAll('.protocol-notes').forEach((field) => {
+            const key = `workshop:${pageKey}:note:${field.dataset.noteId}`;
+            const saved = localStorage.getItem(key);
+
+            if (saved !== null) {
+              field.value = saved;
+            }
+
+            field.addEventListener('input', () => {
+              localStorage.setItem(key, field.value);
+            });
+          });
+        });
+        </script>
+
+  pdf:
+    toc: false
+    number-sections: false
+---
+
+# 3 PCR Product check with agarose gel electrophoresis
+
+**Approximate Time:** 2 hours
+
+## Material
+
+### Equipment and tools
+
+- Electrophoresis box with power supply
+- Gel casting tray and comb
+- Microwave-safe flask or beaker
+- UV transilluminator or gel imaging system
+- Balance
+- Microwave
+- 20µl pipette
+- Camera or smartphone
+
+### Consumables
+
+- Gloves
+- Paper towels
+- Parafilm
+- 20µl tips
+
+### Reagents
+
+- 1x TAE buffer
+- Agarose powder
+- DNA stain such as GelRed
+- Molecular weight marker (DNA ladder)
+- DNA loading dye
+- 5 µl PCR product
+
+## Instructions
+
+- [ ] Weigh 1g agarose for 100ml TAE buffer.
+- [ ] Add the agarose powder to the buffer in a microwave-safe flask or beaker.
+- [ ] Microwave the solution in short bursts, swirling occasionally, until the agarose is completely dissolved and the solution is clear. Be careful not to overheat.
+- [ ] Allow the agarose solution to cool slightly, then add the DNA stain. For GelRed, add 10 µL of the 10,000X stock per 100 mL.
+- [ ] Gently swirl the solution to mix in the stain.
+- [ ] Pour the agarose solution into a gel casting tray, inserting the comb to create sample wells. Allow the gel to solidify for 20-30 minutes.
+- [ ] Once solidified, carefully remove the comb and place the gel into the electrophoresis box. Add 1X TAE buffer until the gel is submerged.
+- [ ] Load 6 µL of the molecular weight ladder into the first well.
+- [ ] Mix 5 µL of one randomly selected PCR sample with 1-2 µL of DNA loading dye, then load the samples into the remaining wells. Include one positive and one negative control per gel.
+- [ ] Connect the electrophoresis box to a power supply and run the gel at 120 V for 30 minutes.
+- [ ] Visualize the DNA bands using a UV transilluminator.
+- [ ] Take a picture of the gel for documentation. Confirm the correct PCR product size.
+- [ ] Repeat the gel for other samples of a stripe in case the lane was blank.
+
+::: {.content-visible when-format="html"}
+
+**My notes**
+
+<textarea
+  class="protocol-notes"
+  data-note-id="gel-electrophoresis"
+  aria-label="My notes for agarose gel electrophoresis">
+</textarea>
+
+:::
+
+::: {.content-visible unless-format="html"}
+
+**My notes**
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+:::
+
+
+# 4 PCR Clean-up
+
+**Approximate Time:** 1.5 hour
+
+## Material
+
+### Equipment and tools
+
+- Hula Mixer (gentle rotator mixer)
+- Vortex mixer
+- Microfuge
+- Timer
+- Quantus® fluorometer
+- Magnetic stand suitable for 1.5 ml reaction tubes
+- Multichannel pipette
+- 1000µl pipette
+- 200µl pipette
+- 20µl pipette
+- 2.5µl pipette
+
+### Consumables
+
+- gloves
+- 1000µl tips
+- 200µl tips
+- 20µl tips
+- 10µl filter tips
+- 1.5ml reaction tubes
+
+### Reagents
+
+- CleanPCR® magnetic beads
+- 75% EtOH, freshly prepared from absolute ethanol e.g. 750µl EtOH with 250µl nuclease free H~2~O in a 1.5ml tube.
+- nuclease free H~2~O
+- Lambda DNA
+- QuantiFluor® dsDNA dye
+
+## Instructions
+
+- [ ] Use the multichannel pipette to pool 10µl from each reaction of all stripes in one new stripe. This is done across all 64 samples of the group.
+- [ ] Pool all 8 tubes except the positive control in a 1.5ml tube and vortex 20s.
+- [ ] Transfer 20µl in a new 1.5ml reaction tube for each participant.
+- [ ] Vortex CleanPCR magnetic beads and shake down before opening the lid.
+- [ ] Add 36µl CleanPCR® to the 20µl PCR mix.
+
+**Table 3: PCR reaction volumes and corresponding CleanPCR® volumes**
+
+| PCR Reaction Volume (µL) | CleanPCR (µL) |
+|-------------------------:|--------------:|
+| 10 | 18 |
+| 20 | 36 |
+| 40 | 72 |
+| 50 | 90 |
+
+- [ ] Incubate on the Hula Mixer for 5 minutes. Spin down.
+- [ ] Place the plate on a magnetic separation device to magnetize the CleanPCR particles. Incubate at room temperature until the CleanPCR is completely cleared from solution.
+- [ ] Aspirate and discard the cleared supernatant. Do not disturb the CleanPCR particles.
+- [ ] Add 200µl 75% ethanol to each well.
+- [ ] Incubate at room temperature for 1 minute. It is not necessary to resuspend the CleanPCR particles.
+- [ ] Aspirate and discard the cleared supernatant. Do not disturb the CleanPCR.
+- [ ] Repeat Steps 9-11 for a second 75% ethanol wash step.
+- [ ] After the second wash step spin down the empty tube with the beads, put back on the magnetic stand and use a 10µl pipette to discard the remaining supernatant.
+- [ ] Leave the plate on the magnetic separation device for 10-15 minutes to air dry the CleanPCR particles. Remove any residue liquid with a pipet.
+
+> **Note:** It is important to dry the CleanPCR particles before elution. Residual ethanol may interfere with downstream applications.
+
+- [ ] Remove the tube from the magnet.
+- [ ] Add 30µl nuclease free H~2~O to the tube.
+- [ ] Pipet up and down 20 times or vortex for 30 seconds.
+- [ ] Incubate at room temperature for 2-3 minutes.
+- [ ] Place the tube on the magnet and incubate at room temperature until the beads are completely cleared from the solution.
+- [ ] Transfer the cleared supernatant containing purified DNA to a new 1.5ml tube.
+
+::: {.content-visible when-format="html"}
+
+**My notes**
+
+<textarea
+  class="protocol-notes"
+  data-note-id="pcr-cleanup"
+  aria-label="My notes for PCR clean-up">
+</textarea>
+
+:::
+
+::: {.content-visible unless-format="html"}
+
+**My notes**
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+:::
+
+
+# 5 Quantification
+
+**Approximate Time:** 30min
+
+## Material
+
+### Equipment and tools
+
+- Vortex mixer
+- Microfuge
+- Quantus® fluorometer
+- 200µl pipette
+- 2.5µl pipette
+
+### Consumables
+
+- Gloves
+- 200µl tips
+- 10µl filter tips
+- 0.5ml clear reaction tube (e.g. Promega® No. E4941, E4942)
+
+### Reagents
+
+- Lambda DNA standard (400ng/µl)
+- QuantiFluor® dsDNA dye
+- 1µl unknown sample
+
+## Instructions
+
+- [ ] If needed, calibrate the Fluorometer by reading blank and standard as described by the manufacturer.
+- [ ] Add 200µl of QuantiFluor ONE dsDNA Dye® to the 0.5ml PCR tube. Protect tube from light!
+- [ ] Add 1µl of unknown samples to 200µl of QuantiFluor® ONE dsDNA Dye in 0.5ml PCR tubes. Vortex well, and protect tube from light.
+- [ ] Select the ONE DNA protocol on the Quantus® Fluorometer.
+- [ ] Enter the volume of the unknown sample (1µl) and desired concentration units.
+- [ ] Measure fluorescence of the unknown sample and record the final sample concentration results.
+- [ ] Calculate the volume for 100fmol. You may use your smartphone with the QR-code below to convert the weight [ng] into molar quantity [fmol]. The COI amplicon with 9bp indexed primer has a size of 726bp, (0.73kb) or after ligation of the two adaptors 800bp (0.8kb).
+
+[Open the Bioline weight-to-molar-quantity calculator](https://www.bioline.com/media/calculator/01_07.html)
+
+![Scan with your smartphone to visit the molecular weight to molar quantity calculator.](figures/bioline_calculator_qr.png){#fig-bioline-calculator width=25%}
+
+::: {.content-visible when-format="html"}
+
+**My notes**
+
+<textarea
+  class="protocol-notes"
+  data-note-id="quantification"
+  aria-label="My notes for quantification">
+</textarea>
+
+:::
+
+::: {.content-visible unless-format="html"}
+
+**My notes**
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+:::

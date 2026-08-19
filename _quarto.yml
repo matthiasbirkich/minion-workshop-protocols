@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Hands-on MinION Workshop"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Protocol
+      - href: github_discussions.qmd
+        text: Discussions
+      - href: Protocol.pdf
+        text: PDF Handout
+
+format:
+  html:
+    toc: true
+    theme: cosmo
