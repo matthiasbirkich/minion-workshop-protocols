@@ -9,6 +9,16 @@ GitHub Discussions provides a place for scientific exchange, questions, troubles
 
 Discussions are intended for communication between workshop participants and researchers. They are not tests or assignments.
 
+## Open the workshop discussions
+
+The discussion forum for this workshop is available directly in the GitHub repository:
+
+[Open GitHub Discussions](https://github.com/matthiasbirkich/minion-workshop-protocols/discussions)
+
+Repository:
+
+[matthiasbirkich/minion-workshop-protocols](https://github.com/matthiasbirkich/minion-workshop-protocols)
+
 ## When should I use a Discussion?
 
 Use GitHub Discussions when you would like to:

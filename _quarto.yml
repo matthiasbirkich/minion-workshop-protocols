@@ -11,11 +11,15 @@ website:
         text: Protocol
 
       - href: github_discussions.qmd
-        text: Discussions
+        text: Discussion Guide
 
       - href: Protocol.pdf
         text: PDF Handout
         target: _blank
+        
+      - href: https://github.com/matthiasbirkich/minion-workshop-protocols/discussions
+        text: GitHub Discussions
+        target: _blank 
 
 format:
   html:
