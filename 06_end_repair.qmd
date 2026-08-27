@@ -1,0 +1,55 @@
+---
+title: "6 End Repair and Clean-up"
+---
+
+**Approximate time:** 1 hour  
+**Reference workflow:** WAMBAnet / ONT Ligation Sequencing Kit V14-era procedure.
+
+## Equipment and reagents
+
+- Gentle rotator / Hula mixer
+- Magnetic stand, microfuge, vortex mixer, thermal cycler
+- 1000, 200, 20 and 2.5 µL pipettes
+- 0.2 mL thin-walled PCR tubes and 1.5 mL tubes
+- Ice
+- Approximately **100–200 fmol amplicon DNA** (workshop target; confirm current kit instruction)
+- Nuclease-free water
+- Fresh 80% ethanol
+- NEBNext® Ultra II End Prep Buffer
+- NEBNext® Ultra II End Prep Enzyme Mix
+- AXP magnetic beads from the ONT ligation kit
+
+::: {.callout-warning}
+The original handout contains inconsistent wording around 50–100 vs 100–200 fmol. This SHARK-Seq draft therefore keeps **100–200 fmol as the workshop planning range** and requires the actual input used to be recorded. Confirm against the current kit SOP before the workshop.
+:::
+
+**Actual input used:** <input class="protocol-input" data-field-id="endrepair-fmol" placeholder="fmol">
+
+## End-prep reaction
+
+- [ ] Thaw End Prep Buffer and AXP beads at room temperature; mix as required and place on ice.
+- [ ] Thaw End Prep Enzyme Mix on ice; mix gently by flicking/pipetting. Do not vortex the enzyme mix unless the current manufacturer instruction explicitly permits it.
+- [ ] Prepare the thermal cycler for **20 °C for 5 min, then 65 °C for 5 min** (WAMBAnet reference condition).
+- [ ] Calculate the DNA volume from the measured concentration and actual amplicon length.
+- [ ] Bring the selected DNA input to **25 µL** with nuclease-free water.
+- [ ] Add 3.5 µL Ultra II End Prep Reaction Buffer.
+- [ ] Add 1.5 µL Ultra II End Prep Enzyme Mix.
+- [ ] Mix gently and spin down briefly.
+- [ ] Incubate 20 °C for 5 min and 65 °C for 5 min.
+
+## Bead clean-up
+
+- [ ] Resuspend AXP beads.
+- [ ] Transfer the 30 µL end-prep reaction to a 1.5 mL tube.
+- [ ] Add 30 µL AXP beads and mix by flicking.
+- [ ] Incubate on a gentle rotator for 5 min at room temperature.
+- [ ] Prepare fresh 80% ethanol.
+- [ ] Pellet beads on magnet until supernatant is clear; remove supernatant.
+- [ ] Wash twice with 200 µL fresh 80% ethanol without disturbing the pellet.
+- [ ] Remove residual ethanol and dry briefly without cracking the pellet.
+- [ ] Resuspend in 31 µL nuclease-free water; incubate ~2 min at room temperature.
+- [ ] Pellet on magnet and transfer 31 µL clear eluate to a clean DNA LoBind tube.
+- [ ] Keep on ice and quantify yield if required before adaptor ligation.
+
+### My notes
+<textarea class="protocol-notes" data-note-id="end-repair"></textarea>

@@ -1,0 +1,58 @@
+---
+title: "5 dsDNA Quantification and fmol Calculation"
+---
+
+**Approximate time:** 30 minutes
+
+## Equipment and assay
+
+The WAMBAnet reference workflow used the Quantus® fluorometer with QuantiFluor® ONE dsDNA reagent. A validated alternative fluorometer may be used if the workshop provides one; record the instrument and calibration used.
+
+**Instrument used**  
+<input class="protocol-input" data-field-id="quant-instrument" placeholder="e.g. Quantus / DIY-QuantiFluorONE">
+
+## Measurement
+
+- [ ] Prepare / measure a fresh reagent blank according to the active fluorometer procedure.
+- [ ] Confirm calibration is valid for the expected concentration range.
+- [ ] Add 200 µL QuantiFluor® ONE dsDNA reagent to a clean 0.5 mL clear tube.
+- [ ] Add 1 µL unknown sample unless the active instrument protocol specifies another sample volume.
+- [ ] Mix consistently and protect from light.
+- [ ] Measure and record the dsDNA concentration in ng/µL.
+
+## Convert ng to fmol using the **actual amplicon length**
+
+For dsDNA using approximately 660 g mol⁻¹ per base pair:
+
+$$
+\mathrm{fmol}=\frac{c\,[\mathrm{ng/\mu L}]\times V\,[\mathrm{\mu L}]\times10^6}{660\times L\,[\mathrm{bp}]}
+$$
+
+For a target molar amount:
+
+$$
+V\,[\mathrm{\mu L}]=\frac{n\,[\mathrm{fmol}]\times660\times L\,[\mathrm{bp}]}{10^6\times c\,[\mathrm{ng/\mu L}]}
+$$
+
+### Practical target
+
+The WAMBAnet end-prep step specifies approximately **100–200 fmol** of amplicon DNA. A useful mid-range planning value is **150 fmol**, but the workshop lead should confirm the actual target for the current library-preparation kit.
+
+| Example length | DNA mass for 100 fmol | DNA mass for 150 fmol | DNA mass for 200 fmol |
+|---:|---:|---:|---:|
+| 245 bp | 16.2 ng | 24.3 ng | 32.3 ng |
+| 320 bp | 21.1 ng | 31.7 ng | 42.2 ng |
+| 726 bp (old WAMBAnet COI example) | 47.9 ng | 71.9 ng | 95.8 ng |
+| 2000 bp | 132 ng | 198 ng | 264 ng |
+
+::: {.callout-important}
+The old WAMBAnet shortcut “100 fmol ≈ 48 ng” applied only to an approximately 726 bp COI product. SHARK-Seq uses different fragment lengths, so the **general formula must be used**.
+:::
+
+**Sample concentration:** <input class="protocol-input" data-field-id="quant-conc" placeholder="ng/µL">  
+**Amplicon length used for calculation:** <input class="protocol-input" data-field-id="quant-length" placeholder="bp">  
+**Target:** <input class="protocol-input" data-field-id="quant-target" placeholder="100–200 fmol; e.g. 150">  
+**Calculated aliquot volume:** <input class="protocol-input" data-field-id="quant-volume" placeholder="µL">
+
+### My notes
+<textarea class="protocol-notes" data-note-id="quantification"></textarea>

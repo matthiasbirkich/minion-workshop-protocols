@@ -1,0 +1,28 @@
+---
+title: "9 Set Up the Sequencing Run with MinKNOW"
+---
+
+**Approximate time:** < 1 hour for setup
+
+- [ ] Ensure stable power and network access as required.
+- [ ] Start MinKNOW.
+- [ ] Run the Flow Cell Health Check.
+- [ ] Record the number of available pores and apply the workshop acceptance criterion.
+- [ ] Start a new sequencing experiment and select the correct Flongle flow cell.
+- [ ] Select the actual ligation sequencing kit used in the workshop.
+- [ ] Select the basecalling model / accuracy mode specified by the workshop lead.
+- [ ] Confirm output path, basecalling and read-filter settings.
+- [ ] Start sequencing.
+- [ ] Monitor active pores, data yield and read quality.
+- [ ] Record any change from the planned settings.
+
+::: {.callout-note}
+The original WAMBAnet handout used Ligation Sequencing Kit V14 and recommended SUP basecalling. The SHARK-Seq site records these as reference choices; the actual MinKNOW version and kit available at the workshop take precedence.
+:::
+
+**MinKNOW version:** <input class="protocol-input" data-field-id="minknow-version" placeholder="version">  
+**Kit selected:** <input class="protocol-input" data-field-id="minknow-kit" placeholder="kit">  
+**Basecalling model:** <input class="protocol-input" data-field-id="minknow-model" placeholder="model">
+
+### My notes
+<textarea class="protocol-notes" data-note-id="minknow"></textarea>

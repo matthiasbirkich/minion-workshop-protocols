@@ -1,0 +1,40 @@
+---
+title: "10 Sequence Processing and Identification"
+---
+
+The original WAMBAnet workshop merged FASTQ files and used **ONTbarcoder** for conventional barcoding, followed by sequence identification. The exact SHARK-Seq analysis path depends on whether the data are long reference amplicons, short eDNA markers, indexed pools, or a combination of these.
+
+## Reference WAMBAnet path
+
+- [ ] Locate the sequencing FASTQ output.
+- [ ] Merge FASTQ/FASTQ.GZ files only when this is appropriate for the selected analysis software.
+- [ ] Obtain ONTbarcoder from its project repository: <https://github.com/asrivathsan/ONTbarcoder>.
+- [ ] For conventional barcoding, load the read file and the required demultiplexing / identifier information.
+- [ ] Record the expected barcode/amplicon length used by the analysis.
+- [ ] Run consensus generation / barcode calling.
+- [ ] Retain the output FASTA sequences and analysis log.
+
+## SHARK-Seq decision point
+
+Do **not** assume that the old 655-bp COI barcode length applies to the new primer systems.
+
+**Dataset type:**  
+<select class="protocol-select" data-field-id="analysis-type">
+  <option value="">-- select --</option>
+  <option>Long reference amplicons</option>
+  <option>MarVer3 eDNA</option>
+  <option>miniSharkR2 eDNA</option>
+  <option>miniSharkR5 eDNA</option>
+  <option>Mixed / other</option>
+</select>
+
+**Expected fragment length / range:** <input class="protocol-input" data-field-id="analysis-length" placeholder="bp">  
+**Demultiplexing / index scheme:** <input class="protocol-input" data-field-id="analysis-index" placeholder="describe or link">  
+**Identification database / method:** <input class="protocol-input" data-field-id="analysis-db" placeholder="database / workflow">
+
+::: {.callout-warning}
+The supplied SHARK-Seq source material does not yet specify the final demultiplexing and taxonomic-assignment workflow for all new primer sets. This page therefore preserves the WAMBAnet reference path but requires the workshop team to record the actual analysis method rather than implying that ONTbarcoder/655-bp COI settings apply universally.
+:::
+
+### My notes
+<textarea class="protocol-notes" data-note-id="sequence-analysis"></textarea>

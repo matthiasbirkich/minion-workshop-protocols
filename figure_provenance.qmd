@@ -1,0 +1,13 @@
+---
+title: "Figure Provenance"
+---
+
+The public workshop site should use only figures whose reuse is permitted.
+
+| File | Use in site | Source / note |
+|---|---|---|
+| `primer_binding_overview.png` | Chapter 1 | extracted from the workshop-team Word file supplied on 27 Aug 2026; exact software/source attribution should be confirmed before public release |
+| `example_pcr_gel.jpg` | Chapter 3 | raw/example gel image extracted from the workshop-team Word file; presented as an example rather than validation of SHARK-Seq |
+| `reference_amplicon_map.png` | stored but not required on the main pages | workshop-team supplied primer/reference map; provenance should be confirmed before public release |
+
+Figures that appeared to reproduce general mitochondrial-genome graphics, commercial ladder artwork or literature figures were deliberately **not** reused in the main site.

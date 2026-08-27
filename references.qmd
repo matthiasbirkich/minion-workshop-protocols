@@ -1,0 +1,28 @@
+---
+title: "References and Source Links"
+---
+
+## Workshop source material
+
+- *Hands on MinION: Generating reference data for West African marine pelagic fish*. WAMBA-net summer school training, University Abidjan, September 2024. Workshop handout supplied by the workshop team.
+- *Primer-Ref-lib-result.docx*. Working notes / primer and reference-library material supplied for the SHARK-Seq adaptation, August 2026.
+
+## Primer and eDNA literature
+
+- Valsecchi E, et al. 2020. *Novel universal primers for metabarcoding environmental DNA surveys of marine mammals and other marine vertebrates*. Environmental DNA. DOI: 10.1002/edn3.72.
+- Leurs G, et al. 2023. *Addressing data-deficiency of threatened sharks and rays in a highly dynamic coastal ecosystem using environmental DNA*. Ecological Indicators 154:110795. DOI: 10.1016/j.ecolind.2023.110795.
+- Ivanova NV, Zemlak TS, Hanner RH, Hebert PDN. 2007. *Universal primer cocktails for fish DNA barcoding*. Molecular Ecology Notes 7:544–548. DOI: 10.1111/j.1471-8286.2007.01748.x.
+- Miya M, Nishida M. 2015. *The mitogenomic contributions to molecular phylogenetics and evolution of fishes: a 15-year retrospect*. Ichthyological Research 62:29–71. DOI: 10.1007/s10228-014-0440-9.
+- de la Hoz Schilling C, et al. 2024. *eDNA metabarcoding reveals a rich but threatened and declining elasmobranch community in West Africa’s largest marine protected area, the Banc d’Arguin*. Conservation Genetics 25:805–821. DOI: 10.1007/s10592-024-01604-y.
+
+## Manufacturer and software links
+
+- Official NEB Tm Calculator: <https://tmcalculator.neb.com/>
+- Q5 High-Fidelity 2X Master Mix M0492 protocol: <https://www.neb.com/en-us/protocols/protocol-for-q5-high-fidelity-2x-master-mix-m0492>
+- Phusion Hot Start Flex 2X Master Mix M0536 protocol: <https://www.neb.com/en/protocols/protocol-for-phusion-hot-start-flex-2x-master-mix-m0536>
+- Independent open Tm/Ta implementation: <https://github.com/Dioskurides/polymerase-tm>
+- ONTbarcoder: <https://github.com/asrivathsan/ONTbarcoder>
+
+## Important use note
+
+Manufacturer protocols and Oxford Nanopore kit instructions are living documents. Before the workshop, verify that reagent names, kit identifiers and loading volumes match the material actually supplied.

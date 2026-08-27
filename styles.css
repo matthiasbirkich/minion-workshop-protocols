@@ -1,0 +1,42 @@
+.protocol-notes {
+  width: 100%;
+  min-height: 8rem;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  margin: 0.4rem 0 1.4rem 0;
+  font: inherit;
+}
+.task-list input[type="checkbox"] {
+  transform: scale(1.15);
+  margin-right: 0.45rem;
+}
+.protocol-input, .protocol-select {
+  width: min(100%, 42rem);
+  padding: .45rem .55rem;
+  margin: .2rem 0 .8rem 0;
+  font: inherit;
+}
+.sequence {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+.decision-card {
+  border: 1px solid #b7b7b7;
+  border-radius: .5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.status-calculated { font-weight: 600; }
+.small-note { font-size: .92em; }
+.tool-buttons a {
+  display: inline-block;
+  padding: .55rem .8rem;
+  margin: .15rem .35rem .35rem 0;
+  border: 1px solid currentColor;
+  border-radius: .4rem;
+  text-decoration: none;
+}
+@media print {
+  .protocol-notes { min-height: 5rem; }
+  .no-print { display:none !important; }
+}

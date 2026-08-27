@@ -1,0 +1,41 @@
+---
+title: "7 Ligation-Adaptor Ligation"
+---
+
+**Approximate time:** 1 hour
+
+## Materials
+
+- NEBNext Quick T4 DNA Ligase (E6056 or workshop-equivalent)
+- Ligation Adapter (LA), Ligation Buffer (LNB), Elution Buffer (EB)
+- AXP magnetic beads and Short Fragment Buffer (SFB)
+- 30 µL end-repaired PCR product
+- Magnetic rack, microfuge, vortex mixer, gentle rotator
+- 200, 20 and 2.5 µL pipettes
+
+## Instructions
+
+- [ ] Spin down Ligation Adapter and T4 ligase; place on ice.
+- [ ] Thaw Ligation Buffer at room temperature, spin down and mix thoroughly by pipetting; place on ice.
+- [ ] Thaw Elution Buffer at room temperature, vortex, spin down and place on ice.
+- [ ] Mix in this order: 30 µL end-prepped DNA + 12.5 µL Ligation Buffer + 5 µL T4 DNA Ligase + 2.5 µL Ligation Adapter.
+- [ ] Mix gently by pipetting and briefly spin down.
+- [ ] Incubate for 10 min at room temperature.
+- [ ] Resuspend AXP beads and add 20 µL to the reaction.
+- [ ] Mix by flicking; incubate on gentle rotator for 5 min at room temperature.
+- [ ] Pellet on magnet until clear and remove supernatant slowly.
+- [ ] Wash with 125 µL SFB, resuspending by flicking as in the reference protocol.
+- [ ] Return to magnet; remove supernatant and repeat the SFB wash.
+- [ ] Remove residual liquid and dry beads briefly without over-drying.
+- [ ] Resuspend in 7 µL EB and incubate 10 min at room temperature.
+- [ ] Pellet on magnet and transfer the clear eluate containing the DNA library to a clean tube.
+- [ ] Quantify the final library if required.
+
+## Library amount for loading
+
+The WAMBAnet reference used approximately **10 fmol in 5 µL** for Flongle loading. Confirm this against the current ONT kit / flow-cell guidance used for SHARK-Seq.
+
+**Actual loading target:** <input class="protocol-input" data-field-id="ligation-load-fmol" placeholder="fmol">
+
+### My notes
+<textarea class="protocol-notes" data-note-id="adapter-ligation"></textarea>

@@ -1,0 +1,106 @@
+---
+title: "1 Reference DNA PCR"
+---
+
+**Polymerase:** Q5® High-Fidelity 2X Master Mix (NEB M0492)  
+**Purpose:** generate long mitochondrial reference amplicons from known reference DNA.
+
+## Primer pairs under consideration
+
+| Reference PCR | Forward primer | Reverse primer | Current status | Calculated starting Ta* |
+|---|---|---|---|---:|
+| Reference PCR A | workshop-selected MiFish forward variant | MarVer3R | forward variant not yet fixed | calculate after selection |
+| Reference PCR A — short candidate | MiFish-U-F `GTCGGTAAAACTCGTGCCAGC` | MarVer3R `GGATTGCGCTGTTATCCC` | candidate | **65 °C** |
+| Reference PCR B | ChimeraF `AAGGACTACTTTGATAGAGT` | FR1d `CACCTCAGGGTGTCCGAARAAYCARAA` | defined | **57 °C** |
+
+*Calculated starting values assume Q5 High-Fidelity 2X Master Mix and 0.5 µM of each primer. Critical runs should be checked with the official NEB Tm Calculator. Final workshop conditions should be recorded below.
+
+::: {.callout-note}
+The workshop team's source material explicitly raises the possibility of using the shorter MiFish-U-F sequence to make a ~60 °C workflow practical. The present protocol therefore treats primer choice as a **documented workshop decision**, not as a pre-set fact.
+:::
+
+## Primer-selection decision
+
+<div class="decision-card">
+
+**Reference PCR A — forward primer selected**
+
+<select class="protocol-select" data-field-id="refA-primer">
+  <option value="">-- select during workshop --</option>
+  <option>Short MiFish-U-F: GTCGGTAAAACTCGTGCCAGC</option>
+  <option>Alternative MiFish forward primer</option>
+</select>
+
+**Exact forward-primer sequence used (5′→3′)**  
+<input class="protocol-input" data-field-id="refA-sequence" placeholder="enter exact sequence">
+
+**NEB-calculated starting Ta**  
+<input class="protocol-input" data-field-id="refA-ta-calculated" placeholder="°C">
+
+**Actual workshop Ta**  
+<input class="protocol-input" data-field-id="refA-ta-used" placeholder="°C">
+
+</div>
+
+![Workshop-team primer-binding overview. Use this as a conceptual map; exact amplicon lengths depend on the actual reference sequence.](figures/primer_binding_overview.png){fig-alt="Primer binding overview supplied by the workshop team" width=95%}
+
+## Recommended calculation workflow
+
+- [ ] Open the [official NEB Tm Calculator](https://tmcalculator.neb.com/).
+- [ ] Select the Q5 High-Fidelity 2X Master Mix product corresponding to M0492.
+- [ ] Set primer concentration to **500 nM** unless the workshop lead specifies another concentration.
+- [ ] Enter the exact forward and reverse primer sequences.
+- [ ] Record the calculated annealing temperature.
+- [ ] If a different MiFish forward variant is selected, recalculate before preparing the thermocycler program.
+- [ ] Record the actual temperature used and whether amplification was successful.
+
+The same calculation can be independently checked with [Dioskurides/polymerase-tm](https://github.com/Dioskurides/polymerase-tm).
+
+## PCR reaction setup
+
+Use the current NEB protocol for Q5 High-Fidelity 2X Master Mix as the manufacturer reference. The following table is a **starting worksheet**, because template volume/concentration and final reaction volume have not been specified in the supplied SHARK-Seq source material.
+
+| Component | Workshop value |
+|---|---:|
+| Q5 High-Fidelity 2X Master Mix | ____ µL |
+| Forward primer | ____ µL; final ____ µM |
+| Reverse primer | ____ µL; final ____ µM |
+| Template DNA | ____ µL |
+| Nuclease-free water | to ____ µL |
+| **Total reaction volume** | **____ µL** |
+
+::: {.callout-warning}
+Do not copy the old WAMBAnet 52 °C cycling condition into these Q5 reactions. It belonged to a different primer/polymerase setup.
+:::
+
+## Cycling worksheet
+
+| Step | Temperature | Time | Cycles |
+|---|---:|---:|---:|
+| Initial denaturation | 98 °C | ____ | 1 |
+| Denaturation | 98 °C | ____ | ____ |
+| Annealing — Reference PCR A | **workshop-selected** | ____ | ↕ |
+| Annealing — Reference PCR B | **57 °C calculated start** | ____ | ↕ |
+| Extension | 72 °C | set from expected amplicon length | ↕ |
+| Final extension | 72 °C | ____ | 1 |
+| Hold | 4–15 °C | hold | — |
+
+## Long-reference amplicon length
+
+The exact lengths of the two long reference amplicons **cannot be fixed without the actual reference species / mitochondrial sequence**. During preparation or the workshop, map both primers to the relevant mitochondrial reference sequence and record:
+
+| PCR | Species / reference | accession / sequence source | expected amplicon |
+|---|---|---|---:|
+| Reference A | __________ | __________ | ____ bp |
+| Reference B | __________ | __________ | ____ bp |
+
+- [ ] Record reference species / sample identity.
+- [ ] Record the primer variant actually used.
+- [ ] Record predicted amplicon length.
+- [ ] Include NTC and positive control where appropriate.
+- [ ] Keep reactions chilled during setup.
+- [ ] Run PCR under the selected program.
+- [ ] Store PCR product at 4 °C for short-term use or according to the local laboratory procedure.
+
+### My notes
+<textarea class="protocol-notes" data-note-id="reference-pcr"></textarea>

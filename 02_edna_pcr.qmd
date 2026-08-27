@@ -1,0 +1,60 @@
+---
+title: "2 eDNA PCR"
+---
+
+**Polymerase:** Phusion™ Hot Start Flex 2X Master Mix (NEB M0536)  
+**Purpose:** amplify short mitochondrial markers suitable for potentially fragmented environmental DNA.
+
+## Primer systems
+
+| eDNA PCR | Target | Forward primer | Reverse primer | Expected product | Calculated starting Ta* |
+|---|---|---|---|---:|---:|
+| eDNA 1 | 16S marine vertebrates | MarVer3F `AGACGAGAAGACCCTRTG` | MarVer3R `GGATTGCGCTGTTATCCC` | ~245 bp average | **58–61 °C** |
+| eDNA 2 | NADH2 sharks | ChimeraF `AAGGACTACTTTGATAGAGT` | miniSharkR5 `CCTATTCAAACTAGGAGTC` | ~320 bp | **55 °C** |
+| eDNA 3 | NADH2 sharks + rays | ChimeraF `AAGGACTACTTTGATAGAGT` | miniSharkR2 `GGAATRATGGCTAATGTGTT` | ~320 bp | **56 °C** |
+
+*Calculated starting values assume Phusion Hot Start Flex 2X Master Mix and 0.5 µM of each primer. Degenerate bases create more than one possible oligonucleotide sequence; therefore a range is shown for MarVer3.
+
+## Workshop decision
+
+A common temperature can be convenient operationally, but it must not be presented as calculated optimum unless it is supported by the actual primer pair.
+
+| PCR | Calculated start | Actual workshop Ta | Result |
+|---|---:|---:|---|
+| MarVer3F / MarVer3R | 58–61 °C | ____ °C | ☐ success ☐ weak ☐ no product |
+| ChimeraF / miniSharkR5 | 55 °C | ____ °C | ☐ success ☐ weak ☐ no product |
+| ChimeraF / miniSharkR2 | 56 °C | ____ °C | ☐ success ☐ weak ☐ no product |
+
+## Reaction setup worksheet
+
+Use the current NEB Phusion Hot Start Flex 2X Master Mix protocol as the manufacturer reference. The supplied workshop source does not specify the final SHARK-Seq reaction volume or template input, so record the actual values here.
+
+| Component | Workshop value |
+|---|---:|
+| Phusion Hot Start Flex 2X Master Mix | ____ µL |
+| Forward primer | ____ µL; final ____ µM |
+| Reverse primer | ____ µL; final ____ µM |
+| eDNA template | ____ µL |
+| Nuclease-free water | to ____ µL |
+| **Total reaction volume** | **____ µL** |
+
+## Cycling worksheet
+
+| Step | Temperature | Time | Cycles |
+|---|---:|---:|---:|
+| Initial denaturation | 98 °C | ____ | 1 |
+| Denaturation | 98 °C | ____ | ____ |
+| Annealing | see primer table / workshop decision | ____ | ↕ |
+| Extension | 72 °C | appropriate for ~245–320 bp | ↕ |
+| Final extension | 72 °C | ____ | 1 |
+| Hold | 4–15 °C | hold | — |
+
+- [ ] Prepare an NTC for each relevant PCR master mix.
+- [ ] Add positive control material where the workshop plan provides one.
+- [ ] Keep pre-PCR reagents and amplified products physically separated according to local laboratory practice.
+- [ ] Record primer pair, polymerase lot, template ID and actual Ta.
+- [ ] Run PCR.
+- [ ] Proceed to PCR product check.
+
+### My notes
+<textarea class="protocol-notes" data-note-id="edna-pcr"></textarea>

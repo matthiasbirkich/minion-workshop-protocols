@@ -1,0 +1,37 @@
+---
+title: "8 Priming and Loading the Flongle"
+---
+
+**Approximate time:** < 1 hour
+
+## Materials
+
+- MinION device and Flongle adapter
+- Flongle Flow Cell (the WAMBAnet reference used FLO-FLG114)
+- Sequencing Buffer (SB)
+- Library Beads (LIB)
+- Flow Cell Tether (FCT)
+- Flow Cell Flush (FCF)
+- Prepared DNA library
+- 1.5 mL tube, 200 µL tips, filter tips
+
+::: {.callout-important}
+Oxford Nanopore kit formulations and loading instructions can change. Verify kit and flow-cell identifiers against the material actually supplied for the workshop before using volumes from an older handout.
+:::
+
+## Reference workflow
+
+- [ ] Thaw SB, LIB, FCT and FCF at room temperature.
+- [ ] Mix as required by the current kit instructions; briefly spin down and place on ice where instructed.
+- [ ] WAMBAnet reference priming mix: 117 µL FCF + 3 µL FCT.
+- [ ] Insert the Flongle adapter into the powered MinION before inserting the flow cell.
+- [ ] Insert the Flongle flow cell securely.
+- [ ] Open the sample port without touching the flow-cell array or adapter contacts.
+- [ ] Prime carefully, avoiding air gaps and forceful dispensing.
+- [ ] WAMBAnet reference sequencing mix: 15 µL SB + 10 µL freshly mixed LIB + 5 µL DNA library.
+- [ ] Load without introducing air bubbles.
+- [ ] Seal the flow cell as specified by the current device instructions.
+- [ ] Close the device lid and proceed to MinKNOW.
+
+### My notes
+<textarea class="protocol-notes" data-note-id="flongle-loading"></textarea>

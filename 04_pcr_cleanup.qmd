@@ -1,0 +1,60 @@
+---
+title: "4 PCR Clean-up"
+---
+
+**Approximate time:** 1.5 hours  
+**WAMBAnet-derived step; pooling scheme must be confirmed for SHARK-Seq.**
+
+## Equipment
+
+- Hula mixer / gentle rotator
+- Vortex mixer and microfuge
+- Magnetic stand suitable for 1.5 mL tubes
+- Multichannel pipette where applicable
+- 1000, 200, 20 and 2.5 µL pipettes
+
+## Reagents
+
+- CleanPCR® magnetic beads
+- Freshly prepared 75% ethanol
+- Nuclease-free water
+
+::: {.callout-warning}
+## Pooling decision required
+The original WAMBAnet workflow pooled indexed PCRs. The supplied SHARK-Seq material does **not** yet specify whether the new reference/eDNA PCRs already carry sample-specific indexes. Do not pool samples simply because the old protocol did. Record the workshop decision first.
+:::
+
+**Pooling / clean-up plan used**  
+<select class="protocol-select" data-field-id="cleanup-pooling">
+  <option value="">-- select during workshop --</option>
+  <option>Clean individually</option>
+  <option>Pool indexed PCR products before clean-up</option>
+  <option>Pool after individual clean-up</option>
+  <option>Other — document in notes</option>
+</select>
+
+## Bead clean-up
+
+The WAMBAnet protocol used **1.8× CleanPCR bead volume** (e.g. 36 µL beads for 20 µL PCR mix).
+
+| PCR volume | CleanPCR at 1.8× |
+|---:|---:|
+| 10 µL | 18 µL |
+| 20 µL | 36 µL |
+| 40 µL | 72 µL |
+| 50 µL | 90 µL |
+
+- [ ] Vortex/resuspend CleanPCR beads before use.
+- [ ] Add the selected 1.8× bead volume to the PCR product.
+- [ ] Mix and incubate on a gentle rotator for 5 min; briefly spin down.
+- [ ] Place on magnet until the supernatant clears.
+- [ ] Remove supernatant without disturbing beads.
+- [ ] Wash with 75% ethanol without resuspending the pellet.
+- [ ] Remove ethanol and repeat for a second wash.
+- [ ] Remove residual ethanol carefully.
+- [ ] Air dry sufficiently to remove ethanol, but avoid excessive over-drying.
+- [ ] Remove from magnet and elute in the workshop-defined volume of nuclease-free water.
+- [ ] Mix, incubate briefly, return to magnet and transfer the clear eluate to a clean tube.
+
+### My notes
+<textarea class="protocol-notes" data-note-id="cleanup"></textarea>

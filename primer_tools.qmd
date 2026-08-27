@@ -1,0 +1,48 @@
+---
+title: "Primer Tools and Annealing-Temperature Calculations"
+---
+
+## Official calculator
+
+<div class="tool-buttons">
+<a href="https://tmcalculator.neb.com/" target="_blank" rel="noopener"><strong>Open official NEB Tm Calculator</strong></a>
+</div>
+
+Use this tool as the primary reference for workshop calculations. Select the exact polymerase/kit, confirm primer concentration and enter the exact 5′→3′ sequences.
+
+## Independent open reproduction
+
+<div class="tool-buttons">
+<a href="https://github.com/Dioskurides/polymerase-tm" target="_blank" rel="noopener"><strong>Open polymerase-tm on GitHub</strong></a>
+</div>
+
+`polymerase-tm` is an independent MIT-licensed Python implementation that documents NEB-compatible Tm/Ta calculation logic and can be used as a reproducibility / cross-check tool. It is not affiliated with NEB; critical workshop values should be checked against the official calculator.
+
+## Current calculation table
+
+| Primer pair | Polymerase | Calculated starting Ta |
+|---|---|---:|
+| short MiFish-U-F / MarVer3R | Q5 High-Fidelity 2X | **65 °C** |
+| ChimeraF / FR1d | Q5 High-Fidelity 2X | **57 °C** |
+| MarVer3F / MarVer3R | Phusion Hot Start Flex 2X | **58–61 °C** |
+| ChimeraF / miniSharkR5 | Phusion Hot Start Flex 2X | **55 °C** |
+| ChimeraF / miniSharkR2 | Phusion Hot Start Flex 2X | **56 °C** |
+
+## Reproducible local calculation
+
+The repository includes `tools/primer_calculations.csv` and an optional script `tools/calculate_annealing.py`. After installing the independent package:
+
+```bash
+python -m pip install polymerase-tm
+python tools/calculate_annealing.py
+```
+
+The script is a convenience cross-check only; the **official NEB calculator remains the primary manufacturer tool**.
+
+## Temperature terminology
+
+- **Calculated starting Ta:** value obtained from a defined calculator/polymerase/primer setup.
+- **Workshop-selected Ta:** temperature actually programmed during the workshop.
+- **Validated Ta:** condition shown experimentally to provide the required specific product under the documented setup.
+
+Do not silently promote a calculated value to “validated”.

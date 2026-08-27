@@ -1,0 +1,6 @@
+name,polymerase,forward,reverse,calculated_start_Ta_C,status
+short_MiFish-U-F__MarVer3R,Q5_2X,GTCGGTAAAACTCGTGCCAGC,GGATTGCGCTGTTATCCC,65,candidate_forward_variant
+ChimeraF__FR1d,Q5_2X,AAGGACTACTTTGATAGAGT,CACCTCAGGGTGTCCGAARAAYCARAA,57,defined
+MarVer3F__MarVer3R,Phusion_HS_Flex_2X,AGACGAGAAGACCCTRTG,GGATTGCGCTGTTATCCC,58-61,degenerate_range
+ChimeraF__miniSharkR5,Phusion_HS_Flex_2X,AAGGACTACTTTGATAGAGT,CCTATTCAAACTAGGAGTC,55,defined
+ChimeraF__miniSharkR2,Phusion_HS_Flex_2X,AAGGACTACTTTGATAGAGT,GGAATRATGGCTAATGTGTT,56,degenerate_reverse

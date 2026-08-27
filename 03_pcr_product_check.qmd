@@ -1,0 +1,53 @@
+---
+title: "3 PCR Product Check by Agarose Gel Electrophoresis"
+---
+
+**Approximate time:** 2 hours
+
+## Material
+
+### Equipment and tools
+
+- Electrophoresis box with power supply
+- Gel casting tray and comb
+- Microwave-safe flask or beaker
+- UV transilluminator or gel imaging system
+- Balance
+- Microwave
+- 20 µL pipette
+- Camera or smartphone
+
+### Consumables and reagents
+
+- Gloves, paper towels, Parafilm
+- 20 µL tips
+- 1× TAE buffer
+- Agarose powder
+- DNA stain such as GelRed
+- Molecular-weight marker / DNA ladder
+- DNA loading dye
+- PCR product
+
+## Instructions
+
+- [ ] Weigh 1 g agarose for 100 mL 1× TAE buffer (1% gel unless the workshop lead specifies another concentration).
+- [ ] Dissolve agarose carefully in a microwave-safe vessel.
+- [ ] Cool slightly and add the selected DNA stain according to its instructions.
+- [ ] Pour the gel, insert comb and allow the gel to solidify.
+- [ ] Place the gel in the electrophoresis chamber and cover with 1× TAE.
+- [ ] Load the selected molecular-weight marker.
+- [ ] Mix an aliquot of PCR product with loading dye and load the samples.
+- [ ] Include negative and positive controls where available.
+- [ ] Run under the workshop-defined voltage/time (the WAMBAnet reference used 120 V for ~30 min).
+- [ ] Visualize and document bands.
+- [ ] Compare band size with the **expected product for the primer pair actually used**.
+- [ ] Record non-specific bands, smear, weak product or no product.
+
+::: {.callout-important}
+The long reference-PCR sizes are not yet universal fixed values. A band should therefore be judged against the species-specific in-silico prediction recorded in Chapter 1, not against an invented single size.
+:::
+
+![Example PCR gel supplied by the workshop team. It is included as a reference/example, not as an acceptance criterion for the new SHARK-Seq PCRs.](figures/example_pcr_gel.jpg){fig-alt="Example workshop PCR gel" width=75%}
+
+### My notes
+<textarea class="protocol-notes" data-note-id="gel-check"></textarea>
