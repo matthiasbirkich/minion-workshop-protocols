@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Hands-on MinION Workshop"
+  title: "SHARK-Seq Workshop"
 
   navbar:
     left:
@@ -13,20 +13,90 @@ website:
       - href: github_discussions.qmd
         text: Discussion Guide
 
+      - href: primer_tools.qmd
+        text: Primer Tools
+
       - href: Protocol.pdf
         text: PDF Handout
         target: _blank
-        
+
+      - href: https://tmcalculator.neb.com/
+        text: NEB Tm Calculator
+        target: _blank
+
+      - href: https://github.com/Dioskurides/polymerase-tm
+        text: Independent Tm Calculator
+        target: _blank
+
       - href: https://github.com/matthiasbirkich/minion-workshop-protocols/discussions
         text: GitHub Discussions
-        target: _blank 
+        target: _blank
+
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - section: "PCR"
+        contents:
+          - href: 01_reference_pcr.qmd
+            text: "1 Reference DNA PCR"
+
+          - href: 02_edna_pcr.qmd
+            text: "2 eDNA PCR"
+
+          - href: primer_tools.qmd
+            text: "Primer Tools"
+
+      - section: "Library preparation"
+        contents:
+          - href: 03_pcr_product_check.qmd
+            text: "3 PCR Product Check"
+
+          - href: 04_pcr_cleanup.qmd
+            text: "4 PCR Clean-up"
+
+          - href: 05_quantification.qmd
+            text: "5 DNA Quantification"
+
+          - href: 06_end_repair.qmd
+            text: "6 End Repair and Clean-up"
+
+          - href: 07_adapter_ligation.qmd
+            text: "7 LA-Adaptor Ligation"
+
+          - href: 08_flongle_loading.qmd
+            text: "8 Flongle Priming and Loading"
+
+      - section: "Sequencing and analysis"
+        contents:
+          - href: 09_minknow.qmd
+            text: "9 MinKNOW"
+
+          - href: 10_sequence_analysis.qmd
+            text: "10 Sequence Analysis"
+
+      - section: "Workshop documentation"
+        contents:
+          - href: workshop_decisions.qmd
+            text: "Workshop Decisions"
+
+          - href: references.qmd
+            text: "References"
+
+          - href: figure_provenance.qmd
+            text: "Figure Provenance"
 
 format:
   html:
     toc: true
+    toc-depth: 3
     theme: cosmo
     link-external-newwindow: true
     link-external-icon: true
+    css: styles.css
+    include-after-body: assets/protocol.js
 
 resources:
   - Protocol.pdf
+  - figures/**
+  - tools/**
