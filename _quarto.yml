@@ -95,83 +95,71 @@ format:
     link-external-icon: true
     css: styles.css
     include-after-body:
-  text: |
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
+      text: |
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-      const pageKey = window.location.pathname;
+          const pageKey = window.location.pathname;
 
-      /* Enable and remember protocol checkboxes */
-      document.querySelectorAll(
-        '.task-list input[type="checkbox"]'
-      ).forEach(function (box, index) {
+          document.querySelectorAll(
+            '.task-list input[type="checkbox"]'
+          ).forEach(function (box, index) {
 
-        box.disabled = false;
+            box.disabled = false;
 
-        const key =
-          'sharkseq:' + pageKey + ':task:' + index;
+            const key =
+              'sharkseq:' + pageKey + ':task:' + index;
 
-        try {
-          const saved = localStorage.getItem(key);
-
-          if (saved !== null) {
-            box.checked = saved === '1';
-          }
-
-          box.addEventListener('change', function () {
             try {
-              localStorage.setItem(
-                key,
-                box.checked ? '1' : '0'
-              );
-            } catch (e) {
-              /* Checkbox still works if localStorage is unavailable */
-            }
+              const saved = localStorage.getItem(key);
+
+              if (saved !== null) {
+                box.checked = saved === '1';
+              }
+
+              box.addEventListener('change', function () {
+                try {
+                  localStorage.setItem(
+                    key,
+                    box.checked ? '1' : '0'
+                  );
+                } catch (e) {}
+              });
+
+            } catch (e) {}
           });
 
-        } catch (e) {
-          /* Safari may restrict localStorage in some modes.
-             The checkbox remains usable without persistence. */
-        }
-      });
+          document.querySelectorAll(
+            '.protocol-notes'
+          ).forEach(function (field, index) {
 
+            const noteID =
+              field.dataset.noteId || index;
 
-      /* Remember workshop notes */
-      document.querySelectorAll(
-        '.protocol-notes'
-      ).forEach(function (field, index) {
+            const key =
+              'sharkseq:' + pageKey + ':note:' + noteID;
 
-        const noteID =
-          field.dataset.noteId || index;
-
-        const key =
-          'sharkseq:' + pageKey + ':note:' + noteID;
-
-        try {
-          const saved = localStorage.getItem(key);
-
-          if (saved !== null) {
-            field.value = saved;
-          }
-
-          field.addEventListener('input', function () {
             try {
-              localStorage.setItem(
-                key,
-                field.value
-              );
-            } catch (e) {
-              /* Notes remain editable without persistence */
-            }
+              const saved = localStorage.getItem(key);
+
+              if (saved !== null) {
+                field.value = saved;
+              }
+
+              field.addEventListener('input', function () {
+                try {
+                  localStorage.setItem(
+                    key,
+                    field.value
+                  );
+                } catch (e) {}
+              });
+
+            } catch (e) {}
           });
 
-        } catch (e) {
-          /* Safari fallback */
-        }
-      });
-
-    });
-    </script>
+        });
+        </script>
 
 resources:
   - Protocol.pdf
