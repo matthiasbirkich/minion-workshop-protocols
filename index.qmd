@@ -1,0 +1,51 @@
+---
+title: "SHARK-Seq Workshop Protocol"
+subtitle: "Reference-library and eDNA PCR workflow with Oxford Nanopore sequencing"
+---
+
+## Purpose
+
+This site is an English-language, bench-oriented workshop protocol derived from the WAMBAnet *Hands on MinION* training workflow and adapted to the SHARK-Seq primer strategy supplied by the workshop team.
+
+The protocol deliberately distinguishes three kinds of information:
+
+- **fixed procedure** — steps inherited from the established workshop workflow;
+- **calculated starting condition** — e.g. an annealing temperature calculated for a specified primer/polymerase combination;
+- **workshop-selected condition** — a primer variant, annealing temperature, pooling scheme or other choice that must be recorded when the workshop team makes the final decision.
+
+::: {.callout-important}
+## Draft status
+This is a **workshop-ready draft**, not a claim that every new SHARK-Seq PCR has already been experimentally optimized. Primer identity, final annealing temperature and the long-reference amplicon lengths must be recorded for the actual workshop material.
+:::
+
+## Workflow
+
+1. **Reference DNA PCR** — long mitochondrial reference amplicons using Q5 High-Fidelity 2X Master Mix.
+2. **eDNA PCR** — short mitochondrial markers using Phusion Hot Start Flex 2X Master Mix.
+3. **PCR product check** by agarose gel electrophoresis.
+4. **PCR clean-up** with magnetic beads.
+5. **dsDNA quantification** and conversion from ng to fmol using the actual amplicon length.
+6. **End repair and clean-up**.
+7. **Ligation-adaptor ligation**.
+8. **Flongle priming and loading**.
+9. **MinKNOW sequencing run**.
+10. **Read processing / sequence identification**.
+
+## Why two PCR branches?
+
+The reference-DNA branch aims to obtain relatively long mitochondrial reference sequences from known DNA. The eDNA branch uses short markers because environmental DNA is often fragmented. The workshop therefore treats reference-library generation and environmental detection as complementary tasks.
+
+## Interactive use
+
+Checkboxes, selections and notes are stored **locally in the browser on the current device**. They are not uploaded to GitHub.
+
+<button class="btn btn-outline-secondary no-print" data-reset-protocol>Reset saved entries on this page</button>
+
+## External primer tools
+
+<div class="tool-buttons">
+<a href="https://tmcalculator.neb.com/" target="_blank" rel="noopener">Official NEB Tm Calculator</a>
+<a href="https://github.com/Dioskurides/polymerase-tm" target="_blank" rel="noopener">Independent open reproduction (GitHub)</a>
+</div>
+
+Both tools are also available as permanent navigation tabs at the top of the site.
