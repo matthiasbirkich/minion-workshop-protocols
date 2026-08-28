@@ -9,16 +9,17 @@ This page collects parameters that must be confirmed before or during SHARK-Seq.
 | Reference PCR A forward primer | MiFish forward not yet fixed; short MiFish-U-F is a candidate | __________ |
 | Reference PCR A Ta | 65 °C calculated for short MiFish-U-F / MarVer3R | __________ °C |
 | Reference PCR B Ta | 57 °C calculated for ChimeraF / FR1d | __________ °C |
-| MarVer3 Ta | 58–61 °C calculated starting range | __________ °C |
+| MarVer3 Ta | 58-61 °C calculated starting range | __________ °C |
 | miniSharkR5 Ta | 55 °C calculated start | __________ °C |
 | miniSharkR2 Ta | 56 °C calculated start | __________ °C |
 | Long reference species / sequences | not provided | __________ |
 | Long reference amplicon lengths | species-dependent | __________ bp |
 | PCR reaction volumes/template input | not provided | __________ |
 | Index/barcode strategy | not provided | __________ |
-| PCR pooling strategy | old WAMBAnet pooling may not apply | __________ |
-| End-prep input | planning range 100–200 fmol | __________ fmol |
-| Final library loading target | WAMBAnet reference ~10 fmol | __________ fmol |
+| PCR pooling strategy | not yet specified | __________ |
+| PCR clean-up bead ratio | current draft 1.8X; verify retention needs | __________ X |
+| End-prep input | planning range 100-200 fmol | __________ fmol |
+| Final library loading target | current draft ~10 fmol; verify supplied kit | __________ fmol |
 | ONT kit / Flongle version | verify supplied kit | __________ |
 | MinKNOW / basecalling model | verify current setup | __________ |
 | Final analysis workflow | not fully specified | __________ |
