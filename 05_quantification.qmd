@@ -11,7 +11,7 @@ The reference workflow used the Quantus® fluorometer with QuantiFluor® ONE dsD
 **Instrument used**  
 <input class="protocol-input" data-field-id="quant-instrument" placeholder="e.g. Quantus / DIY-QuantiFluorONE">
 
-## 5.X Using the DIY-QuantiFluorONE dsDNA Fluorometer
+## Using the DIY-QuantiFluorONE dsDNA Fluorometer
 
 The DIY-QuantiFluorONE dsDNA Fluorometer can be used for fluorometric
 quantification of the purified PCR products before library preparation.
