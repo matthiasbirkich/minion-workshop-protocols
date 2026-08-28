@@ -33,7 +33,7 @@ website:
       - href: primer_tools.qmd
         text: Primer Tools
 
-      - href: Protocol.pdf
+      - href: Protocol.pdf?v=20260828
         text: PDF Handout
         target: _blank
 

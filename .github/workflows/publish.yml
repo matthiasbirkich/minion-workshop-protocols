@@ -23,14 +23,54 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Install Quarto
+      - name: Install Quarto and TinyTeX
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 
+      - name: Build combined protocol source
+        run: |
+          python scripts/build_protocol_qmd.py
+
+      - name: Render current PDF handout
+        shell: bash
+        run: |
+          rm -f Protocol.pdf
+          rm -f _site/Protocol.pdf
+
+          quarto render Protocol.qmd --to pdf
+
+          if [ -f _site/Protocol.pdf ]; then
+            cp _site/Protocol.pdf Protocol.pdf
+          fi
+
+          if [ ! -f Protocol.pdf ]; then
+            echo "ERROR: Protocol.pdf was not generated."
+            exit 1
+          fi
+
+          echo "Generated PDF:"
+          ls -lh Protocol.pdf
+
+      - name: Clean website output
+        run: rm -rf _site
+
       - name: Render Quarto website
         run: quarto render --to html
+
+      - name: Verify PDF is included in website
+        shell: bash
+        run: |
+          if [ ! -f _site/Protocol.pdf ]; then
+            echo "ERROR: Protocol.pdf was not copied into _site."
+            exit 1
+          fi
+
+          echo "PDF included in website:"
+          ls -lh _site/Protocol.pdf
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v5
