@@ -90,13 +90,13 @@ $$
 660\ \mathrm{g\,mol^{-1}\,bp^{-1}},
 $$
 
-the molecular mass of an amplicon of length \(L\) is approximately
+the molecular mass of an amplicon of length $L$ is approximately
 
 $$
 M = 660L\ \mathrm{g\,mol^{-1}}.
 $$
 
-For a DNA concentration \(c\) in ng/µL and a volume \(V\) in µL:
+For a DNA concentration $c$ in ng/µL and a volume $V$ in µL:
 
 $$
 n_{\mathrm{fmol}}
@@ -110,10 +110,10 @@ $$
 
 where:
 
-- \(n_{\mathrm{fmol}}\) = amount of DNA in fmol;
-- \(c\) = measured DNA concentration in ng/µL;
-- \(V\) = DNA volume in µL;
-- \(L\) = representative amplicon length in bp.
+- $n_{\mathrm{fmol}}$ = amount of DNA in fmol;
+- $c$ = measured DNA concentration in ng/µL;
+- $V$ = DNA volume in µL;
+- $L$ = representative amplicon length in bp.
 
 The DNA volume required for a selected molar amount is therefore:
 
@@ -137,7 +137,7 @@ $$
 
 Examples:
 
-| Amplicon length | DNA mass for 100 fmol | Concentration equivalent when \(V=1\) µL |
+| Amplicon length | DNA mass for 100 fmol | Concentration equivalent when $V=1$ µL |
 |---:|---:|---:|
 | 245 bp | 16.17 ng | 16.17 ng/µL |
 | 320 bp | 21.12 ng | 21.12 ng/µL |
@@ -145,16 +145,16 @@ Examples:
 | 1000 bp | 66.00 ng | 66.00 ng/µL |
 | 2000 bp | 132.00 ng | 132.00 ng/µL |
 
-Thus, the former 726-bp example
+Thus, for a 726-bp amplicon,
 
 $$
 48\ \mathrm{ng}
 \approx
-100\ \mathrm{fmol}
+100\ \mathrm{fmol}.
 $$
 
-is only valid for a fragment close to 726 bp and must not be used as a
-general conversion factor for SHARK-Seq products.
+This relationship is specific to a fragment close to 726 bp and must
+not be used as a general conversion factor for SHARK-Seq products.
 
 ### Open-validation uncertainty estimate
 
@@ -190,7 +190,7 @@ $$
 \pm13.1\ \mathrm{ng/\mu L}.
 $$
 
-For a **726-bp dsDNA amplicon** and a DNA volume of \(1\ \mu L\),
+For a **726-bp dsDNA amplicon** and a DNA volume of $V=1$ µL,
 
 $$
 \Delta n_{\mathrm{fmol}}
@@ -211,8 +211,8 @@ approximately **±25–30 fmol**.
 This value is not a universal uncertainty of the instrument. It is an
 openly documented upper-bound estimate for the stated amplicon length
 and observed blank range. The corresponding molar uncertainty changes
-with amplicon length. A current reagent blank and 400 ng/uL standard 
-should therefore always be measured for quantitative work.
+with amplicon length. A current reagent blank should therefore always
+be measured for quantitative work.
 
 ## Measurement
 
