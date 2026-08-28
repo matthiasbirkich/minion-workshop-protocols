@@ -32,6 +32,10 @@ website:
 
       - href: primer_tools.qmd
         text: Primer Tools
+        
+      - href: https://www.bioline.com/calculator/01_07.html
+        text: fmol Calculator
+        target: _blank
 
       - href: Protocol.pdf?v=20260828
         text: PDF Handout
@@ -63,6 +67,10 @@ website:
 
           - href: primer_tools.qmd
             text: "Primer Tools"
+            
+          - href: https://www.bioline.com/calculator/01_07.html
+            text: fmol Calculator
+            target: _blank 
 
       - section: "Library preparation"
         contents:

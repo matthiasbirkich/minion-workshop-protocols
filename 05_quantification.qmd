@@ -128,6 +128,18 @@ V
 \frac{n_{\mathrm{fmol}}\,660L}{10^6c}.
 $$
 
+### External fmol calculator
+
+The molar amount calculated from DNA concentration and fragment length can
+also be checked independently using the Bioline DNA-to-fmol calculator:
+
+[Open the Bioline fmol Calculator](https://www.bioline.com/calculator/01_07.html){target="_blank"}
+
+Use the **actual representative amplicon length** for the SHARK-Seq product.
+The calculator is provided as an independent practical cross-check; the
+equations documented above remain the transparent calculation basis used
+in this protocol.
+
 ### Planning table
 
 | Amplicon length | DNA mass for 100 fmol | DNA mass for 150 fmol | DNA mass for 200 fmol |
