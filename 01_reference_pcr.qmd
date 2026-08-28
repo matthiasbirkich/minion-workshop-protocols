@@ -7,23 +7,42 @@ title: "1 Reference DNA PCR"
 
 ## Primer pairs under consideration
 
+::: {.content-visible when-format="html"}
 | Reference PCR | Forward primer | Reverse primer | Current status | Calculated starting Ta* |
 |---|---|---|---|---:|
 | Reference PCR A | workshop-selected MiFish forward variant | MarVer3R | forward variant not yet fixed | calculate after selection |
-| Reference PCR A — short candidate | MiFish-U-F `GTCGGTAAAACTCGTGCCAGC` | MarVer3R `GGATTGCGCTGTTATCCC` | candidate | **65 °C** |
+| Reference PCR A - short candidate | MiFish-U-F `GTCGGTAAAACTCGTGCCAGC` | MarVer3R `GGATTGCGCTGTTATCCC` | candidate | **65 °C** |
 | Reference PCR B | ChimeraF `AAGGACTACTTTGATAGAGT` | FR1d `CACCTCAGGGTGTCCGAARAAYCARAA` | defined | **57 °C** |
+:::
+
+::: {.content-visible unless-format="html"}
+**Reference PCR A - primer choice open**  
+Forward: workshop-selected MiFish forward variant  
+Reverse: MarVer3R `GGATTGCGCTGTTATCCC`  
+Starting Ta: calculate after the forward-primer sequence is selected.
+
+**Reference PCR A - short candidate**  
+Forward: MiFish-U-F `GTCGGTAAAACTCGTGCCAGC`  
+Reverse: MarVer3R `GGATTGCGCTGTTATCCC`  
+Calculated starting Ta: **65 °C**.
+
+**Reference PCR B**  
+Forward: ChimeraF `AAGGACTACTTTGATAGAGT`  
+Reverse: FR1d `CACCTCAGGGTGTCCGAARAAYCARAA`  
+Calculated starting Ta: **57 °C**.
+:::
 
 *Calculated starting values assume Q5 High-Fidelity 2X Master Mix and 0.5 µM of each primer. Critical runs should be checked with the official NEB Tm Calculator. Final workshop conditions should be recorded below.
 
 ::: {.callout-note}
-The workshop team's source material explicitly raises the possibility of using the shorter MiFish-U-F sequence to make a ~60 °C workflow practical. The present protocol therefore treats primer choice as a **documented workshop decision**, not as a pre-set fact.
+The planning material explicitly raises the possibility of using the shorter MiFish-U-F sequence to make a common temperature near 60 °C practical. The present protocol therefore treats primer choice as a **documented workshop decision**, not as a pre-set fact.
 :::
 
 ## Primer-selection decision
 
 <div class="decision-card">
 
-**Reference PCR A — forward primer selected**
+**Reference PCR A - forward primer selected**
 
 <select class="protocol-select" data-field-id="refA-primer">
   <option value="">-- select during workshop --</option>
@@ -31,7 +50,7 @@ The workshop team's source material explicitly raises the possibility of using t
   <option>Alternative MiFish forward primer</option>
 </select>
 
-**Exact forward-primer sequence used (5′→3′)**  
+**Exact forward-primer sequence used (5'-3')**  
 <input class="protocol-input" data-field-id="refA-sequence" placeholder="enter exact sequence">
 
 **NEB-calculated starting Ta**  
@@ -58,7 +77,7 @@ The same calculation can be independently checked with [Dioskurides/polymerase-t
 
 ## PCR reaction setup
 
-Use the current NEB protocol for Q5 High-Fidelity 2X Master Mix as the manufacturer reference. The following table is a **starting worksheet**, because template volume/concentration and final reaction volume have not been specified in the supplied SHARK-Seq source material.
+Use the current NEB protocol for Q5 High-Fidelity 2X Master Mix as the manufacturer reference. The following table is a **starting worksheet**, because template volume/concentration and final reaction volume have not yet been fixed for the workshop.
 
 | Component | Workshop value |
 |---|---:|
@@ -69,8 +88,8 @@ Use the current NEB protocol for Q5 High-Fidelity 2X Master Mix as the manufactu
 | Nuclease-free water | to ____ µL |
 | **Total reaction volume** | **____ µL** |
 
-::: {.callout-warning}
-Do not copy the old WAMBAnet 52 °C cycling condition into these Q5 reactions. It belonged to a different primer/polymerase setup.
+::: {.callout-important}
+Use the primer/polymerase-specific Q5 calculation for the selected primer pair. A common 60 °C trial can be recorded as an experimental workshop choice, but it is not the calculated optimum for both planned Q5 primer pairs.
 :::
 
 ## Cycling worksheet
@@ -79,11 +98,11 @@ Do not copy the old WAMBAnet 52 °C cycling condition into these Q5 reactions. I
 |---|---:|---:|---:|
 | Initial denaturation | 98 °C | ____ | 1 |
 | Denaturation | 98 °C | ____ | ____ |
-| Annealing — Reference PCR A | **workshop-selected** | ____ | ↕ |
-| Annealing — Reference PCR B | **57 °C calculated start** | ____ | ↕ |
-| Extension | 72 °C | set from expected amplicon length | ↕ |
+| Annealing - Reference PCR A | **workshop-selected** | ____ | repeat |
+| Annealing - Reference PCR B | **57 °C calculated start** | ____ | repeat |
+| Extension | 72 °C | set from expected amplicon length | repeat |
 | Final extension | 72 °C | ____ | 1 |
-| Hold | 4–15 °C | hold | — |
+| Hold | 4-15 °C | hold | - |
 
 ## Long-reference amplicon length
 

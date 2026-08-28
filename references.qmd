@@ -6,6 +6,10 @@ title: "References and Source Links"
 
 - *Hands on MinION: Generating reference data for West African marine pelagic fish*. WAMBA-net summer school training, University Abidjan, September 2024. Workshop handout supplied by the workshop team.
 - *Primer-Ref-lib-result.docx*. Working notes / primer and reference-library material supplied for the SHARK-Seq adaptation, August 2026.
+- Birkicht, M. (2026). *DIY-QuantiFluorONE-dsDNA-Fluorometer*. 
+  Open-source fluorometer for dsDNA quantification.  
+  GitHub repository: <https://github.com/matthiasbirkich/diy-quantifluorone-dsdna-fluorometer>  
+  Archived release: <https://doi.org/10.5281/zenodo.21909959>
 
 ## Primer and eDNA literature
 

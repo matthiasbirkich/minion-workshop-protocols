@@ -6,10 +6,213 @@ title: "5 dsDNA Quantification and fmol Calculation"
 
 ## Equipment and assay
 
-The WAMBAnet reference workflow used the Quantus® fluorometer with QuantiFluor® ONE dsDNA reagent. A validated alternative fluorometer may be used if the workshop provides one; record the instrument and calibration used.
+The reference workflow used the Quantus® fluorometer with QuantiFluor® ONE dsDNA reagent. A validated alternative fluorometer could be used; record the instrument and calibration used.
 
 **Instrument used**  
 <input class="protocol-input" data-field-id="quant-instrument" placeholder="e.g. Quantus / DIY-QuantiFluorONE">
+
+## 5.X Using the DIY-QuantiFluorONE dsDNA Fluorometer
+
+The DIY-QuantiFluorONE dsDNA Fluorometer can be used for fluorometric
+quantification of the purified PCR products before library preparation.
+
+The instrument reports the concentration of the original DNA sample in
+ng/µL. The assay uses 1 µL sample or standard together with 200 µL
+QuantiFluor® ONE dsDNA reagent.
+
+### Front-panel controls
+
+![QuantiFluorONE front-panel controls for firmware QF1-1.0.0-rc2.](figures/qfo_getting_started_menu_navigation.jpeg)
+
+The firmware defines the controls as follows:
+
+| Physical control | Firmware name | Main measurement-screen function | Menu or dialog function |
+|---|---|---|---|
+| Upper-left button | `SELECT` | Open the SELECT menu | Open, confirm, load, or save the highlighted action |
+| Upper-right button | `START` | Measure and store the reagent blank | Measure a calibration blank or the next blank in the ten-blank study |
+| A button | `A` | Measure the selected sample; one cycle contains three sensor readings | Measure the selected high standard during two-point calibration |
+| B button | `B` | Cycle Live → Details → RAW → Live | Back or cancel |
+| D-pad UP/DOWN | `UP/DOWN` | Select the sample ID | Select a menu item or standard concentration |
+| D-pad RIGHT | `RIGHT` | Open or leave the RAW screen | Not used for menu selection |
+| D-pad LEFT | `LEFT` | Change RAW page | Change calibration-result or calibration-status page |
+| On/Off switch | power | Turn the instrument on or off | — |
+| Reset access opening | reset | Restart the PyBadge | Used for normal reset, slow-double-click safe mode, or fast-double-click UF2 bootloader mode |
+| USB Micro port | USB | Power, charging, programming, and file access | — |
+
+The last line of the display shows context-sensitive button hints.
+These hints take priority whenever a calibration or confirmation dialog is open.
+
+### Quick two-point calibration
+
+- [ ] Allow the QuantiFluor® ONE dsDNA standard and reagent to reach room temperature before use.
+- [ ] Switch on the DIY-QuantiFluorONE and allow approximately **20 min warm-up time** before the first quantitative measurement.
+- [ ] During warm-up, prepare the reagent blank and the high calibration standard in compatible 0.5 mL tubes.
+- [ ] Prepare the blank using **200 µL QuantiFluor® ONE dsDNA reagent**.
+- [ ] Prepare the high standard using **200 µL QuantiFluor® ONE dsDNA reagent + 1 µL QuantiFluor® ONE Lambda DNA stock (400 ng/µL)** and mix thoroughly without introducing bubbles.
+- [ ] Open the `SELECT` menu and select the **2-PT calibration** workflow.
+- [ ] Insert the blank tube and press `START` to measure the calibration blank.
+- [ ] Remove the blank and keep it protected from light.
+- [ ] Insert the prepared high-standard tube.
+- [ ] Confirm the standard step with `SELECT`.
+- [ ] Press `A` to measure the high standard.
+- [ ] Press `SELECT` to save the two-point calibration.
+- [ ] Press `B` to return to the measurement screen.
+
+Typical values observed for the validated instrument configuration are:
+
+- calibration slope: approximately **114.5 ± 0.5**;
+- raw reagent blank: approximately **6500–8500 counts**;
+- 400 ng/µL standard: approximately **45,800 ± 500 RFU**.
+
+These values are operational reference values rather than independent
+acceptance limits. A fresh reagent blank should be measured whenever the
+measurement session or optical/reagent conditions have changed.
+
+### Sample measurement
+
+For each PCR product:
+
+- [ ] Select the required sample ID using the D-pad `UP/DOWN` buttons.
+- [ ] Prepare **200 µL QuantiFluor® ONE dsDNA reagent + 1 µL sample**.
+- [ ] Mix thoroughly without introducing visible bubbles.
+- [ ] Insert the tube into the instrument.
+- [ ] Press `A` to measure the sample.
+- [ ] Record the reported concentration together with the sample ID.
+- [ ] Retain the measurement record together with the corresponding amplicon length used for the molar conversion.
+
+### Conversion from DNA concentration to fmol
+
+The amount of DNA in femtomoles depends on the length of the PCR product.
+
+For double-stranded DNA, using an average molar mass of approximately
+
+$$
+660\ \mathrm{g\,mol^{-1}\,bp^{-1}},
+$$
+
+the molecular mass of an amplicon of length \(L\) is approximately
+
+$$
+M = 660L\ \mathrm{g\,mol^{-1}}.
+$$
+
+For a DNA concentration \(c\) in ng/µL and a volume \(V\) in µL:
+
+$$
+n_{\mathrm{fmol}}
+=
+\frac{
+c\,V\,10^6
+}{
+660L
+}.
+$$
+
+where:
+
+- \(n_{\mathrm{fmol}}\) = amount of DNA in fmol;
+- \(c\) = measured DNA concentration in ng/µL;
+- \(V\) = DNA volume in µL;
+- \(L\) = representative amplicon length in bp.
+
+The DNA volume required for a selected molar amount is therefore:
+
+$$
+V
+=
+\frac{
+n_{\mathrm{fmol}}\,660L
+}{
+10^6c
+}.
+$$
+
+For a target of **100 fmol**, the corresponding DNA mass is:
+
+$$
+m_{100}
+=
+0.066L\ \mathrm{ng}.
+$$
+
+Examples:
+
+| Amplicon length | DNA mass for 100 fmol | Concentration equivalent when \(V=1\) µL |
+|---:|---:|---:|
+| 245 bp | 16.17 ng | 16.17 ng/µL |
+| 320 bp | 21.12 ng | 21.12 ng/µL |
+| 726 bp | 47.92 ng | 47.92 ng/µL |
+| 1000 bp | 66.00 ng | 66.00 ng/µL |
+| 2000 bp | 132.00 ng | 132.00 ng/µL |
+
+Thus, the former 726-bp example
+
+$$
+48\ \mathrm{ng}
+\approx
+100\ \mathrm{fmol}
+$$
+
+is only valid for a fragment close to 726 bp and must not be used as a
+general conversion factor for SHARK-Seq products.
+
+### Open-validation uncertainty estimate
+
+As part of the open-validation concept, an approximate upper-bound
+uncertainty can be estimated from the observed variation of the raw
+reagent blank between measurement sessions.
+
+For the validated instrument configuration, a calibration slope of
+approximately
+
+$$
+b = 114.7 \pm 0.5\ \mathrm{RFU\,(ng/\mu L)^{-1}}
+$$
+
+was observed. Historical raw blank values were approximately
+6000–9000 counts.
+
+Using half of this observed range as a conservative estimate,
+
+$$
+\Delta B \approx \pm1500\ \mathrm{counts},
+$$
+
+the corresponding concentration deviation is
+
+$$
+\Delta c
+=
+\frac{\Delta B}{b}
+\approx
+\frac{1500}{114.7}
+\approx
+\pm13.1\ \mathrm{ng/\mu L}.
+$$
+
+For a **726-bp dsDNA amplicon** and a DNA volume of \(1\ \mu L\),
+
+$$
+\Delta n_{\mathrm{fmol}}
+=
+\frac{
+\Delta c\,10^6
+}{
+660 \times 726
+}
+\approx
+\pm27\ \mathrm{fmol}.
+$$
+
+Thus, for a 726-bp amplicon, the historical session-to-session blank
+variation corresponds to a conservative estimated uncertainty of
+approximately **±25–30 fmol**.
+
+This value is not a universal uncertainty of the instrument. It is an
+openly documented upper-bound estimate for the stated amplicon length
+and observed blank range. The corresponding molar uncertainty changes
+with amplicon length. A current reagent blank and 400 ng/uL standard 
+should therefore always be measured for quantitative work.
 
 ## Measurement
 

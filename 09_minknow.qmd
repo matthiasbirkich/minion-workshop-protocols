@@ -2,25 +2,33 @@
 title: "9 Set Up the Sequencing Run with MinKNOW"
 ---
 
-**Approximate time:** < 1 hour for setup
+**Approximate time:** less than 1 hour for setup
 
-- [ ] Ensure stable power and network access as required.
-- [ ] Start MinKNOW.
-- [ ] Run the Flow Cell Health Check.
-- [ ] Record the number of available pores and apply the workshop acceptance criterion.
+The current draft assumes a V14-era ligation workflow and SUP basecalling as starting choices. The **actual MinKNOW version, kit and basecalling model available at the workshop take precedence**.
+
+## Requirements
+
+- MinION with loaded Flongle
+- Stable power supply
+- Network access as required for the workstation/software configuration
+- Current MinKNOW installation and appropriate permissions
+
+## Instructions
+
+- [ ] Open MinKNOW and select the connected device.
+- [ ] Run the **Flow Cell Health Check**.
+- [ ] Record the available pores and apply the current Oxford Nanopore guidance and workshop acceptance rule.
 - [ ] Start a new sequencing experiment and select the correct Flongle flow cell.
-- [ ] Select the actual ligation sequencing kit used in the workshop.
-- [ ] Select the basecalling model / accuracy mode specified by the workshop lead.
-- [ ] Confirm output path, basecalling and read-filter settings.
+- [ ] Select the kit corresponding to the actual library preparation.
+- [ ] Select the basecalling model / accuracy mode specified for the workshop.
+- [ ] Confirm output path, live basecalling and read-filter settings.
+- [ ] Record the run name so it matches the laboratory sample/pool IDs.
 - [ ] Start sequencing.
 - [ ] Monitor active pores, data yield and read quality.
-- [ ] Record any change from the planned settings.
-
-::: {.callout-note}
-The original WAMBAnet handout used Ligation Sequencing Kit V14 and recommended SUP basecalling. The SHARK-Seq site records these as reference choices; the actual MinKNOW version and kit available at the workshop take precedence.
-:::
+- [ ] Record any change from the planned settings or any run interruptions.
 
 **MinKNOW version:** <input class="protocol-input" data-field-id="minknow-version" placeholder="version">  
+**Flow cell / run ID:** <input class="protocol-input" data-field-id="minknow-run" placeholder="ID">  
 **Kit selected:** <input class="protocol-input" data-field-id="minknow-kit" placeholder="kit">  
 **Basecalling model:** <input class="protocol-input" data-field-id="minknow-model" placeholder="model">
 

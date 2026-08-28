@@ -7,11 +7,33 @@ title: "2 eDNA PCR"
 
 ## Primer systems
 
+::: {.content-visible when-format="html"}
 | eDNA PCR | Target | Forward primer | Reverse primer | Expected product | Calculated starting Ta* |
 |---|---|---|---|---:|---:|
-| eDNA 1 | 16S marine vertebrates | MarVer3F `AGACGAGAAGACCCTRTG` | MarVer3R `GGATTGCGCTGTTATCCC` | ~245 bp average | **58–61 °C** |
+| eDNA 1 | 16S marine vertebrates | MarVer3F `AGACGAGAAGACCCTRTG` | MarVer3R `GGATTGCGCTGTTATCCC` | ~245 bp average | **58-61 °C** |
 | eDNA 2 | NADH2 sharks | ChimeraF `AAGGACTACTTTGATAGAGT` | miniSharkR5 `CCTATTCAAACTAGGAGTC` | ~320 bp | **55 °C** |
 | eDNA 3 | NADH2 sharks + rays | ChimeraF `AAGGACTACTTTGATAGAGT` | miniSharkR2 `GGAATRATGGCTAATGTGTT` | ~320 bp | **56 °C** |
+:::
+
+::: {.content-visible unless-format="html"}
+**eDNA 1 - MarVer3**  
+Target: marine vertebrate 16S; expected product: ~245 bp average.  
+Forward: MarVer3F `AGACGAGAAGACCCTRTG`  
+Reverse: MarVer3R `GGATTGCGCTGTTATCCC`  
+Calculated starting Ta: **58-61 °C**.
+
+**eDNA 2 - miniSharkR5**  
+Target: short NADH2 marker for sharks; expected product: ~320 bp.  
+Forward: ChimeraF `AAGGACTACTTTGATAGAGT`  
+Reverse: miniSharkR5 `CCTATTCAAACTAGGAGTC`  
+Calculated starting Ta: **55 °C**.
+
+**eDNA 3 - miniSharkR2**  
+Target: short NADH2 marker for sharks and rays; expected product: ~320 bp.  
+Forward: ChimeraF `AAGGACTACTTTGATAGAGT`  
+Reverse: miniSharkR2 `GGAATRATGGCTAATGTGTT`  
+Calculated starting Ta: **56 °C**.
+:::
 
 *Calculated starting values assume Phusion Hot Start Flex 2X Master Mix and 0.5 µM of each primer. Degenerate bases create more than one possible oligonucleotide sequence; therefore a range is shown for MarVer3.
 
@@ -21,9 +43,9 @@ A common temperature can be convenient operationally, but it must not be present
 
 | PCR | Calculated start | Actual workshop Ta | Result |
 |---|---:|---:|---|
-| MarVer3F / MarVer3R | 58–61 °C | ____ °C | ☐ success ☐ weak ☐ no product |
-| ChimeraF / miniSharkR5 | 55 °C | ____ °C | ☐ success ☐ weak ☐ no product |
-| ChimeraF / miniSharkR2 | 56 °C | ____ °C | ☐ success ☐ weak ☐ no product |
+| MarVer3F / MarVer3R | 58-61 °C | ____ °C | [ ] success [ ] weak [ ] no product |
+| ChimeraF / miniSharkR5 | 55 °C | ____ °C | [ ] success [ ] weak [ ] no product |
+| ChimeraF / miniSharkR2 | 56 °C | ____ °C | [ ] success [ ] weak [ ] no product |
 
 ## Reaction setup worksheet
 
@@ -44,10 +66,10 @@ Use the current NEB Phusion Hot Start Flex 2X Master Mix protocol as the manufac
 |---|---:|---:|---:|
 | Initial denaturation | 98 °C | ____ | 1 |
 | Denaturation | 98 °C | ____ | ____ |
-| Annealing | see primer table / workshop decision | ____ | ↕ |
-| Extension | 72 °C | appropriate for ~245–320 bp | ↕ |
+| Annealing | see primer table / workshop decision | ____ | repeat |
+| Extension | 72 °C | appropriate for ~245-320 bp | repeat |
 | Final extension | 72 °C | ____ | 1 |
-| Hold | 4–15 °C | hold | — |
+| Hold | 4-15 °C | hold | - |
 
 - [ ] Prepare an NTC for each relevant PCR master mix.
 - [ ] Add positive control material where the workshop plan provides one.

@@ -2,21 +2,38 @@
 title: "10 Sequence Processing and Identification"
 ---
 
-The original WAMBAnet workshop merged FASTQ files and used **ONTbarcoder** for conventional barcoding, followed by sequence identification. The exact SHARK-Seq analysis path depends on whether the data are long reference amplicons, short eDNA markers, indexed pools, or a combination of these.
+The final SHARK-Seq analysis path depends on whether the data are long reference amplicons, short eDNA markers, indexed pools, or a combination of these. Record the actual analysis route rather than assuming one universal target length or software setting.
 
-## Reference WAMBAnet path
+## Preserve raw output
 
-- [ ] Locate the sequencing FASTQ output.
-- [ ] Merge FASTQ/FASTQ.GZ files only when this is appropriate for the selected analysis software.
-- [ ] Obtain ONTbarcoder from its project repository: <https://github.com/asrivathsan/ONTbarcoder>.
-- [ ] For conventional barcoding, load the read file and the required demultiplexing / identifier information.
-- [ ] Record the expected barcode/amplicon length used by the analysis.
-- [ ] Run consensus generation / barcode calling.
-- [ ] Retain the output FASTA sequences and analysis log.
+- [ ] Record the MinKNOW output directory and run identifier.
+- [ ] Preserve the original sequencing output before manual processing.
+- [ ] Keep sample/pool metadata, primer pair, PCR Ta and expected amplicon length linked to the sequencing run.
 
-## SHARK-Seq decision point
+## FASTQ handling
 
-Do **not** assume that the old 655-bp COI barcode length applies to the new primer systems.
+- [ ] Locate the sequencing FASTQ / FASTQ.GZ output.
+- [ ] Merge files only if this is appropriate for the selected analysis software and file organization.
+- [ ] Do not overwrite the original read files.
+- [ ] Record all commands or software versions used to combine, filter or demultiplex reads.
+
+Example Windows command for concatenating gzip-compressed FASTQ files when appropriate:
+
+```text
+cmd /c "type *.fastq.gz > merged.fastq.gz"
+```
+
+## ONTbarcoder path - where applicable
+
+ONTbarcoder remains available at: <https://github.com/asrivathsan/ONTbarcoder>
+
+- [ ] Confirm that ONTbarcoder is appropriate for the specific SHARK-Seq library/pool.
+- [ ] Load the relevant FASTQ and demultiplexing/sample information according to the selected workflow.
+- [ ] Enter a target length appropriate to the **actual amplicon**.
+- [ ] Store results in a clearly named output directory linked to the run ID.
+- [ ] Retain consensus FASTA sequences and quality/output reports.
+
+## Dataset and analysis record
 
 **Dataset type:**  
 <select class="protocol-select" data-field-id="analysis-type">
@@ -30,10 +47,20 @@ Do **not** assume that the old 655-bp COI barcode length applies to the new prim
 
 **Expected fragment length / range:** <input class="protocol-input" data-field-id="analysis-length" placeholder="bp">  
 **Demultiplexing / index scheme:** <input class="protocol-input" data-field-id="analysis-index" placeholder="describe or link">  
+**Analysis software / version / parameters:** <input class="protocol-input" data-field-id="analysis-software" placeholder="software/version">  
 **Identification database / method:** <input class="protocol-input" data-field-id="analysis-db" placeholder="database / workflow">
 
+## Sequence identification
+
+The [GBIF Sequence ID tool](https://www.gbif.org/tools/sequence-id) can be used for a rapid identity check where appropriate. For SHARK-Seq, record the reference database and identification criteria actually used, especially when comparing environmental sequences with newly generated long reference amplicons.
+
+- [ ] Confirm that sequence orientation and target marker are appropriate for the selected identification tool.
+- [ ] Record top matches together with alignment/identity evidence rather than recording only a species name.
+- [ ] Keep reference-library sequences distinguishable from environmental sequences.
+- [ ] Document ambiguous or conflicting identifications for group discussion.
+
 ::: {.callout-warning}
-The supplied SHARK-Seq source material does not yet specify the final demultiplexing and taxonomic-assignment workflow for all new primer sets. This page therefore preserves the WAMBAnet reference path but requires the workshop team to record the actual analysis method rather than implying that ONTbarcoder/655-bp COI settings apply universally.
+The final demultiplexing and taxonomic-assignment workflow for all new primer sets is still a workshop decision. Record the actual method, target length and software settings used.
 :::
 
 ### My notes
