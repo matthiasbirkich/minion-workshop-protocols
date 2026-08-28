@@ -1,6 +1,23 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - index.qmd
+    - github_discussions.qmd
+    - primer_tools.qmd
+    - 01_reference_pcr.qmd
+    - 02_edna_pcr.qmd
+    - 03_pcr_product_check.qmd
+    - 04_pcr_cleanup.qmd
+    - 05_quantification.qmd
+    - 06_end_repair.qmd
+    - 07_adapter_ligation.qmd
+    - 08_flongle_loading.qmd
+    - 09_minknow.qmd
+    - 10_sequence_analysis.qmd
+    - workshop_decisions.qmd
+    - references.qmd
+    - figure_provenance.qmd
 
 website:
   title: "SHARK-Seq Workshop"
@@ -101,61 +118,83 @@ format:
 
           const pageKey = window.location.pathname;
 
+          function readSaved(key) {
+            try { return localStorage.getItem(key); }
+            catch (e) { return null; }
+          }
+
+          function saveValue(key, value) {
+            try { localStorage.setItem(key, value); }
+            catch (e) {}
+          }
+
           document.querySelectorAll(
             '.task-list input[type="checkbox"]'
           ).forEach(function (box, index) {
 
             box.disabled = false;
+            const key = 'sharkseq:' + pageKey + ':task:' + index;
+            const saved = readSaved(key);
 
-            const key =
-              'sharkseq:' + pageKey + ':task:' + index;
+            if (saved !== null) {
+              box.checked = saved === '1';
+            }
 
-            try {
-              const saved = localStorage.getItem(key);
-
-              if (saved !== null) {
-                box.checked = saved === '1';
-              }
-
-              box.addEventListener('change', function () {
-                try {
-                  localStorage.setItem(
-                    key,
-                    box.checked ? '1' : '0'
-                  );
-                } catch (e) {}
-              });
-
-            } catch (e) {}
+            box.addEventListener('change', function () {
+              saveValue(key, box.checked ? '1' : '0');
+            });
           });
 
           document.querySelectorAll(
             '.protocol-notes'
           ).forEach(function (field, index) {
 
-            const noteID =
-              field.dataset.noteId || index;
+            const noteID = field.dataset.noteId || index;
+            const key = 'sharkseq:' + pageKey + ':note:' + noteID;
+            const saved = readSaved(key);
 
-            const key =
-              'sharkseq:' + pageKey + ':note:' + noteID;
+            if (saved !== null) {
+              field.value = saved;
+            }
 
-            try {
-              const saved = localStorage.getItem(key);
+            field.addEventListener('input', function () {
+              saveValue(key, field.value);
+            });
+          });
 
-              if (saved !== null) {
-                field.value = saved;
-              }
+          document.querySelectorAll(
+            '.protocol-input, .protocol-select'
+          ).forEach(function (field, index) {
 
-              field.addEventListener('input', function () {
-                try {
-                  localStorage.setItem(
-                    key,
-                    field.value
-                  );
-                } catch (e) {}
-              });
+            const fieldID = field.dataset.fieldId || index;
+            const key = 'sharkseq:' + pageKey + ':field:' + fieldID;
+            const saved = readSaved(key);
 
-            } catch (e) {}
+            if (saved !== null) {
+              field.value = saved;
+            }
+
+            field.addEventListener('input', function () {
+              saveValue(key, field.value);
+            });
+
+            field.addEventListener('change', function () {
+              saveValue(key, field.value);
+            });
+          });
+
+          document.querySelectorAll('[data-reset-protocol]').forEach(function (button) {
+            button.addEventListener('click', function () {
+              if (!confirm('Clear saved checkboxes, selections and notes for this page?')) return;
+              try {
+                Object.keys(localStorage).forEach(function (key) {
+                  if (key.startsWith('sharkseq:' + pageKey + ':')) {
+                    localStorage.removeItem(key);
+                  }
+                });
+              } catch (e) {}
+              window.location.reload();
+            });
           });
 
         });
