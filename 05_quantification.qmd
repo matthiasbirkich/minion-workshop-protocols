@@ -67,7 +67,13 @@ Typical values observed for the validated instrument configuration are:
 - raw reagent blank: approximately **6500-8500 counts**;
 - 400 ng/µL standard: approximately **45,800 ± 500 RFU**.
 
-These values are operational reference values rather than independent acceptance limits. A fresh reagent blank should be measured whenever the measurement session or optical/reagent conditions have changed.
+These values are operational reference values rather than independent
+acceptance limits. Because concentration calculation is based on the
+active two-point calibration, a fresh reagent blank and the 400 ng/µL
+standard should be measured whenever a new measurement session is
+started or whenever optical or reagent conditions have changed.
+
+Daily two-point calibration is recommended.
 
 ### Sample measurement
 
