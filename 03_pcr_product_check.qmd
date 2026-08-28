@@ -2,7 +2,9 @@
 title: "3 PCR Product Check by Agarose Gel Electrophoresis"
 ---
 
-**Approximate time:** 2 hours
+**Approximate time:** about 2 hours
+
+SHARK-Seq contains both short (~245-320 bp) and long reference products. Gel concentration, marker range, voltage and run time should therefore be selected for the product-size question being asked and recorded with the gel image.
 
 ## Material
 
@@ -11,7 +13,7 @@ title: "3 PCR Product Check by Agarose Gel Electrophoresis"
 - Electrophoresis box with power supply
 - Gel casting tray and comb
 - Microwave-safe flask or beaker
-- UV transilluminator or gel imaging system
+- UV transilluminator or suitable gel imaging system
 - Balance
 - Microwave
 - 20 µL pipette
@@ -19,35 +21,38 @@ title: "3 PCR Product Check by Agarose Gel Electrophoresis"
 
 ### Consumables and reagents
 
-- Gloves, paper towels, Parafilm
-- 20 µL tips
-- 1× TAE buffer
+- Gloves and suitable eye/UV protection
+- Pipette tips
+- 1X TAE buffer
 - Agarose powder
-- DNA stain such as GelRed
-- Molecular-weight marker / DNA ladder
+- DNA stain used by the laboratory
+- Molecular-weight marker / DNA ladder covering the relevant size range
 - DNA loading dye
-- PCR product
+- PCR products and controls
+
+## Gel plan
+
+**Gel concentration actually used:** <input class="protocol-input" data-field-id="gel-percent" placeholder="%">  
+**Voltage / run time:** <input class="protocol-input" data-field-id="gel-run" placeholder="e.g. 120 V / 30 min">  
+**Expected size(s):** <input class="protocol-input" data-field-id="gel-expected" placeholder="bp or range">
 
 ## Instructions
 
-- [ ] Weigh 1 g agarose for 100 mL 1× TAE buffer (1% gel unless the workshop lead specifies another concentration).
-- [ ] Dissolve agarose carefully in a microwave-safe vessel.
-- [ ] Cool slightly and add the selected DNA stain according to its instructions.
-- [ ] Pour the gel, insert comb and allow the gel to solidify.
-- [ ] Place the gel in the electrophoresis chamber and cover with 1× TAE.
-- [ ] Load the selected molecular-weight marker.
-- [ ] Mix an aliquot of PCR product with loading dye and load the samples.
-- [ ] Include negative and positive controls where available.
-- [ ] Run under the workshop-defined voltage/time (the WAMBAnet reference used 120 V for ~30 min).
-- [ ] Visualize and document bands.
-- [ ] Compare band size with the **expected product for the primer pair actually used**.
-- [ ] Record non-specific bands, smear, weak product or no product.
+- [ ] Select a gel concentration and molecular-weight marker suitable for the expected product sizes.
+- [ ] Prepare agarose in 1X TAE buffer and heat until completely dissolved.
+- [ ] Allow the solution to cool sufficiently and add the laboratory's DNA stain according to its instructions.
+- [ ] Cast the gel with the required comb and allow it to solidify.
+- [ ] Place the gel in the electrophoresis chamber and cover with 1X TAE.
+- [ ] Load the molecular-weight marker.
+- [ ] Mix the selected PCR products with loading dye and load the gel.
+- [ ] Include the relevant negative and positive PCR controls.
+- [ ] Run under the recorded voltage/time conditions.
+- [ ] Visualize and photograph the gel.
+- [ ] Compare each band with the expected or predicted product size.
+- [ ] Record non-specific bands, primer dimers, weak amplification, smear or bands in the negative control.
+- [ ] For long reference PCRs, do not call the product length "exact" solely from gel migration; use in-silico mapping when the reference sequence becomes available.
 
-::: {.callout-important}
-The long reference-PCR sizes are not yet universal fixed values. A band should therefore be judged against the species-specific in-silico prediction recorded in Chapter 1, not against an invented single size.
-:::
+![Development gel supplied with the SHARK-Seq planning material. It documents prior PCR work and is not an acceptance template for every SHARK-Seq primer pair.](figures/example_pcr_gel.jpg){fig-alt="Development agarose gel with DNA bands from prior primer testing" width=75%}
 
-![Example PCR gel supplied by the workshop team. It is included as a reference/example, not as an acceptance criterion for the new SHARK-Seq PCRs.](figures/example_pcr_gel.jpg){fig-alt="Example workshop PCR gel" width=75%}
-
-### My notes
-<textarea class="protocol-notes" data-note-id="gel-check"></textarea>
+### Gel observations
+<textarea class="protocol-notes" data-note-id="gel-check" placeholder="Primer pair, sample/control, observed band size, specificity, decision"></textarea>
